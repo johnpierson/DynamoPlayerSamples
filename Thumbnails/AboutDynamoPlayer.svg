@@ -9,6 +9,9 @@
    id="svg5"
    inkscape:version="1.1 (c68e22c387, 2021-05-23)"
    sodipodi:docname="AboutDynamoPlayer.svg"
+   inkscape:export-filename="\\Prlx2\Proj\20043- Autodesk Generative Design Documentation + Testing\Deliverables\Scope 5\5.02-DynamoPlayerSamples\Thumbnails\AboutDynamoPlayer.png"
+   inkscape:export-xdpi="320"
+   inkscape:export-ydpi="320"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -66,34 +69,22 @@
        height="79.375"
        x="-1.0658141e-14"
        y="-6.4392935e-15" />
-    <g
-       id="g18692"
-       transform="matrix(1.0123952,0,0,1.0123952,3.0727303,5.8178535)">
-      <text
-         xml:space="preserve"
-         transform="matrix(0.46498472,0,0,0.46498472,-12.398382,-38.95236)"
-         id="text1440"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'Artifakt Element';-inkscape-font-specification:'Artifakt Element, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect1442);fill:#000000;fill-opacity:1;stroke:none"><tspan
-           x="26.664062"
-           y="122.85625"
-           id="tspan18710">About </tspan></text>
-      <text
-         xml:space="preserve"
-         transform="matrix(0.46498472,0,0,0.46498472,-12.398382,-20.063033)"
-         id="text1440-8"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'Artifakt Element';-inkscape-font-specification:'Artifakt Element, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect1442-7);fill:#000000;fill-opacity:1;stroke:none"><tspan
-           x="26.664062"
-           y="122.85625"
-           id="tspan18712">Dynamo </tspan></text>
-      <text
-         xml:space="preserve"
-         transform="matrix(0.46498472,0,0,0.46498472,-12.398382,1.4302102)"
-         id="text1440-2"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'Artifakt Element';-inkscape-font-specification:'Artifakt Element, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect1442-5);fill:#000000;fill-opacity:1;stroke:none"><tspan
-           x="26.664062"
-           y="122.85625"
-           id="tspan18714">Player </tspan></text>
-    </g>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.4707483,0,0,0.4707483,-9.4793321,-36.713184)"
+       id="text1440"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'Artifakt Element';-inkscape-font-specification:'Artifakt Element, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect1442);fill:#000000;fill-opacity:1;stroke:none"><tspan
+         x="26.664062"
+         y="122.85625"
+         id="tspan24111">About
+</tspan><tspan
+         x="26.664062"
+         y="172.85625"
+         id="tspan24113">Dynamo
+</tspan><tspan
+         x="26.664062"
+         y="222.85625"
+         id="tspan24115">Player   </tspan></text>
     <image
        width="16.445768"
        height="16.445768"
@@ -4785,7 +4776,7 @@ UCgWACXoCoVCoVAoFAqFQqFQLABK0BUKhUKhUCgUCoVCoVgAlKArFAqFQqFQKBQKhUKxAChBVygU
 CoVCoVAoFAqFYgFQgq5QKBQKhUKhUCgUCsUC8P8Dv5LSbvA6ZfsAAAAASUVORK5CYII=
 "
        id="image10277"
-       x="60.283394"
-       y="60.283398" />
+       x="61.870686"
+       y="53.228767" />
   </g>
 </svg>
