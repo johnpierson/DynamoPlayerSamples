@@ -33,6 +33,7 @@
       "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
       "NodeType": "PythonScriptNode",
       "Code": "#This script pops up a dialog box with a message from the previous node.\r\nimport clr\r\nclr.AddReference('RevitAPIUI')\r\n\r\nfrom Autodesk.Revit.UI import TaskDialog\r\n\r\nmainText = IN[0]\r\nfooterText = IN[1]\r\n\r\nmessagePop = TaskDialog(\"Dynamo Player\")\r\nmessagePop.MainContent = mainText + \"\\n\\n\" + \"<a href=\\\"http://dynamobim.org/ \\\">\" + footerText + \"</a>\";\r\n\r\nOUT = \"Success!\"\r\n\r\nmessagePop.Show()",
+      "Engine": "CPython3",
       "VariableInputPorts": true,
       "Id": "2f5e2b09e28c45de98e42fcf3da8879c",
       "Inputs": [
@@ -67,7 +68,7 @@
         }
       ],
       "Replication": "Disabled",
-      "Description": "Runs an embedded IronPython script."
+      "Description": "Runs an embedded Python script."
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -94,27 +95,47 @@
     {
       "Start": "bf226f4fcc0b44f494a0a2cb9774a877",
       "End": "5f21b8ecbcb6464e87b3913aec20133d",
-      "Id": "f45b7e78e46540d09fa80e66015e7a72"
+      "Id": "f45b7e78e46540d09fa80e66015e7a72",
+      "IsHidden": "False"
     },
     {
       "Start": "4c8e474214bb4783a7559ee674936882",
       "End": "2844c1784a974ae496789919101e9cb9",
-      "Id": "eee7b65b700040c4a1072d8a2a895e7b"
+      "Id": "eee7b65b700040c4a1072d8a2a895e7b",
+      "IsHidden": "False"
     }
   ],
   "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": null,
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.13",
+      "Data": {}
+    }
+  ],
+  "Author": "None provided",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
   "Bindings": [],
   "View": {
     "Dynamo": {
       "ScaleFactor": 1.0,
-      "HasRunWithoutCrash": false,
+      "HasRunWithoutCrash": true,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "2.1.0.7464",
+      "Version": "2.13.0.3135",
       "RunType": "Manual",
       "RunPeriod": "1000"
     },
     "Camera": {
-      "Name": "Default Camera",
+      "Name": "Background Preview",
       "EyeX": -17.0,
       "EyeY": 24.0,
       "EyeZ": 50.0,
@@ -125,6 +146,7 @@
       "UpY": 1.0,
       "UpZ": 0.0
     },
+    "ConnectorPins": [],
     "NodeViews": [
       {
         "ShowGeometry": true,
@@ -133,7 +155,7 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -188.112709519375,
+        "X": -153.97877515682089,
         "Y": 636.175643215793
       },
       {
@@ -143,8 +165,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 644.658130538842,
-        "Y": 691.168182784266
+        "X": 635.27129858913963,
+        "Y": 689.46148606613826
       },
       {
         "ShowGeometry": true,
@@ -153,33 +175,43 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 56.1113544867144,
-        "Y": 750.213380675252
+        "X": 85.2485007874609,
+        "Y": 783.66714124277564
       }
     ],
     "Annotations": [
       {
-        "Id": "501999cddd1b40198fb0a8899897538a",
-        "Title": "Press Play for More Information about Dynamo Player",
+        "Id": "3920cfe9383c4cabbe37608ec616a820",
+        "Title": "Press Play",
+        "DescriptionText": "Dynamo Player Preview Graph",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
         "Nodes": [
           "4dbdc64b7f3a4e9cbff457a46b00052b"
         ],
-        "Left": -193.02629140026,
-        "Top": -131.14771381622,
-        "Width": 318.0,
-        "Height": 731.0,
-        "FontSize": 48.0,
-        "InitialTop": 166.85228618378,
-        "InitialHeight": 140.0,
-        "TextblockHeight": 288.0,
-        "Background": "#FF848484"
+        "HasNestedGroups": false,
+        "Left": -155.01452561494193,
+        "Top": 100.00025676205007,
+        "Width": 312.0,
+        "Height": 526.0,
+        "FontSize": 36.0,
+        "InitialTop": 173.00025676205007,
+        "InitialHeight": 166.0,
+        "TextblockHeight": 63.0,
+        "Background": "#FFD8D8D8"
       },
       {
         "Id": "4dbdc64b7f3a4e9cbff457a46b00052b",
-        "Title": "CATEGORY:\r\nAdministration\r\n\r\nDESCRIPTION:\r\nThis workflow pops up a message about Dynamo Player.\r\n\r\nThe Dynamo Player application executes Dynamo scripts in the Revit environment. Dynamo scripts can be written to perform many complex functions in Revit, some of which can be very useful to minimize repetitve and time consuming tasks, to run model checks, or to extract and utilize information from the Revit model. Learn more at http://dynamobim.org.\r\n\r\nMODEL PREPARATION:\r\n- None\r\n\r\nNOTE:\r\n - None\r\n\r\nAUTHORS:\r\n- Autodesk\r\n\r\nCopyright(c) 2017, Autodesk\r\n\r\nREQUIRED PACKAGES:\r\n- None",
+        "Title": "CATEGORY:\r\nAdministration\r\n\r\nDESCRIPTION:\r\nThis workflow pops up a message about Dynamo Player.\r\n\r\nThe Dynamo Player application executes Dynamo graphs in the Revit environment. Dynamo graphs can be written to perform many complex functions in Revit, some of which can be very useful to minimize repetitive and time consuming tasks, to run model checks, or to extract and utilize information from the Revit model. Learn more at http://dynamobim.org.\r\n\r\nMODEL PREPARATION:\r\n- None\r\n\r\nNOTE:\r\n - None\r\n\r\nAUTHORS:\r\n- Autodesk\r\n\r\nCopyright(c) 2021, Autodesk\r\n\r\nREQUIRED PACKAGES:\r\n- None",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
         "Nodes": [],
-        "Left": -183.02629140026,
-        "Top": 166.85228618378,
+        "HasNestedGroups": false,
+        "Left": -145.01452561494193,
+        "Top": 173.00025676205007,
         "Width": 0.0,
         "Height": 0.0,
         "FontSize": 36.0,
@@ -189,8 +221,8 @@
         "Background": "#FFC1D676"
       }
     ],
-    "X": 449.650039948727,
-    "Y": 112.698325460425,
-    "Zoom": 0.590352561493105
+    "X": 116.50585498713679,
+    "Y": -274.08420574389754,
+    "Zoom": 1.0009240009373837
   }
 }
