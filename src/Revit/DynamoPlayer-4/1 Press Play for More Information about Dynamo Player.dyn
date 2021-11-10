@@ -1,23 +1,31 @@
 {
   "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
   "IsCustomNode": false,
-  "Description": "",
+  "Description": "Generates a popup to describe what Dynamo player can do.",
   "Name": "1 Press Play for More Information about Dynamo Player",
   "ElementResolver": {
     "ResolutionMap": {}
   },
   "Inputs": [],
-  "Outputs": [],
+  "Outputs": [
+    {
+      "Id": "072712da61f34b35a61362dc180edc26",
+      "Name": "Result",
+      "Type": "string",
+      "InitialValue": "Success!",
+      "Description": "Visualize the node's output"
+    }
+  ],
   "Nodes": [
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
       "NodeType": "CodeBlockNode",
-      "Code": "\"You just ran a Dynamo script in Dynamo Player!\" + \"\\n\\n\" +  \"Dynamo Player executes Dynamo scripts for Revit. Scripts can perform many complex functions in Revit. They can minimize repetitive tasks, run Revit model checks, or extract and utilize information from the model.\";",
+      "Code": "\"You just ran a Dynamo graph in Dynamo Player!\" + \"\\n\\n\" +  \"Dynamo Player executes Dynamo graph s for Revit. Graphs can perform many complex functions in Revit. They can minimize repetitive tasks, run Revit model checks, or extract and utilize information from the model.\";",
       "Id": "8a9f0d4fca2242889c39f729d35ee5cc",
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "bf226f4fcc0b44f494a0a2cb9774a877",
+          "Id": "f8bf96b64e364d1e99f87d97f5190871",
           "Name": "",
           "Description": "Value of expression at line 1",
           "UsingDefaultValue": false,
@@ -32,8 +40,8 @@
     {
       "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
       "NodeType": "PythonScriptNode",
-      "Code": "#This script pops up a dialog box with a message from the previous node.\r\nimport clr\r\nclr.AddReference('RevitAPIUI')\r\n\r\nfrom Autodesk.Revit.UI import TaskDialog\r\n\r\nmainText = IN[0]\r\nfooterText = IN[1]\r\n\r\nmessagePop = TaskDialog(\"Dynamo Player\")\r\nmessagePop.MainContent = mainText + \"\\n\\n\" + \"<a href=\\\"http://dynamobim.org/ \\\">\" + footerText + \"</a>\";\r\n\r\nOUT = \"Success!\"\r\n\r\nmessagePop.Show()",
-      "Engine": "CPython3",
+      "Code": "#This script pops up a dialog box with a message from the previous node.\r\nimport clr\r\nclr.AddReference('RevitAPIUI')\r\n\r\nfrom Autodesk.Revit.UI import TaskDialog\r\n\r\nmainText = IN[0]\r\nfooterText = IN[1]\r\n\r\nmessagePop = TaskDialog(\"Dynamo Player\")\r\nmessagePop.MainContent = mainText + \"\\n\\n\" + \"<a href=\\\"http://dynamobim.org/ \\\">\" + footerText + \"</a>\";\r\n\r\nmessagePop.Show()\r\n\r\nOUT = \"Success!\"\r\n\r\n",
+      "Engine": "IronPython2",
       "VariableInputPorts": true,
       "Id": "2f5e2b09e28c45de98e42fcf3da8879c",
       "Inputs": [
@@ -73,12 +81,12 @@
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
       "NodeType": "CodeBlockNode",
-      "Code": "\"Learn more about Dynamo scripts at dynamobim.org\";",
+      "Code": "\"Learn more about Dynamo graphs at dynamobim.org\";",
       "Id": "78d6cef0c45b4730a80f6f4534ab64c9",
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "4c8e474214bb4783a7559ee674936882",
+          "Id": "a65b29caa33540eaab8abe83e8f9ba6e",
           "Name": "",
           "Description": "Value of expression at line 1",
           "UsingDefaultValue": false,
@@ -89,26 +97,61 @@
       ],
       "Replication": "Disabled",
       "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "072712da61f34b35a61362dc180edc26",
+      "Inputs": [
+        {
+          "Id": "461ed67424fc48b993d53951e3772ea5",
+          "Name": "",
+          "Description": "Node to show output from",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0b5477810f6648e4889587402af1d573",
+          "Name": "",
+          "Description": "Node output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the node's output"
     }
   ],
   "Connectors": [
     {
-      "Start": "bf226f4fcc0b44f494a0a2cb9774a877",
+      "Start": "f8bf96b64e364d1e99f87d97f5190871",
       "End": "5f21b8ecbcb6464e87b3913aec20133d",
-      "Id": "f45b7e78e46540d09fa80e66015e7a72",
+      "Id": "6907f58f48ba43f1b7c872c2b75e1d61",
       "IsHidden": "False"
     },
     {
-      "Start": "4c8e474214bb4783a7559ee674936882",
+      "Start": "3fd08526063a417db968761c78fda732",
+      "End": "461ed67424fc48b993d53951e3772ea5",
+      "Id": "2c1ce37ff92e43e2ae3f559b9eb6480a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "a65b29caa33540eaab8abe83e8f9ba6e",
       "End": "2844c1784a974ae496789919101e9cb9",
-      "Id": "eee7b65b700040c4a1072d8a2a895e7b",
+      "Id": "b0e893c8f745454795fe2f043c30cf85",
       "IsHidden": "False"
     }
   ],
   "Dependencies": [],
   "NodeLibraryDependencies": [],
   "Thumbnail": null,
-  "GraphDocumentationURL": null,
+  "GraphDocumentationURL": "https://dynamobim.org",
   "ExtensionWorkspaceData": [
     {
       "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
@@ -117,7 +160,7 @@
       "Data": {}
     }
   ],
-  "Author": "None provided",
+  "Author": "Autodesk",
   "Linting": {
     "activeLinter": "None",
     "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
@@ -155,8 +198,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -153.97877515682089,
-        "Y": 636.175643215793
+        "X": -203.19718896607361,
+        "Y": 642.45884497867632
       },
       {
         "ShowGeometry": true,
@@ -165,8 +208,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 635.27129858913963,
-        "Y": 689.46148606613826
+        "X": 615.37449300667572,
+        "Y": 683.17828430325494
       },
       {
         "ShowGeometry": true,
@@ -175,8 +218,18 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 85.2485007874609,
+        "X": 80.012499318391519,
         "Y": 783.66714124277564
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Result",
+        "Id": "072712da61f34b35a61362dc180edc26",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": true,
+        "Excluded": false,
+        "X": 874.384576887506,
+        "Y": 683.17828430325494
       }
     ],
     "Annotations": [
@@ -191,12 +244,12 @@
           "4dbdc64b7f3a4e9cbff457a46b00052b"
         ],
         "HasNestedGroups": false,
-        "Left": -155.01452561494193,
-        "Top": 100.00025676205007,
+        "Left": -202.38864620543973,
+        "Top": 104.44158056740923,
         "Width": 312.0,
         "Height": 526.0,
         "FontSize": 36.0,
-        "InitialTop": 173.00025676205007,
+        "InitialTop": 177.44158056740923,
         "InitialHeight": 166.0,
         "TextblockHeight": 63.0,
         "Background": "#FFD8D8D8"
@@ -210,8 +263,8 @@
         "HeightAdjustment": 0.0,
         "Nodes": [],
         "HasNestedGroups": false,
-        "Left": -145.01452561494193,
-        "Top": 173.00025676205007,
+        "Left": -192.38864620543973,
+        "Top": 177.44158056740923,
         "Width": 0.0,
         "Height": 0.0,
         "FontSize": 36.0,
@@ -221,8 +274,8 @@
         "Background": "#FFC1D676"
       }
     ],
-    "X": 116.50585498713679,
-    "Y": -274.08420574389754,
-    "Zoom": 1.0009240009373837
+    "X": 208.04946890286271,
+    "Y": -178.13702527722546,
+    "Zoom": 0.91090998000153922
   }
 }
