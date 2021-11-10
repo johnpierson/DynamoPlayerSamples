@@ -1,6 +1,3 @@
-![mono_build](https://github.com/DynamoDS/Dynamo/workflows/mono_build/badge.svg)
-![Dynamo-VS2019Build](https://github.com/DynamoDS/Dynamo/workflows/Dynamo-VS2019Build/badge.svg)
-
 ![Image](https://raw.github.com/ikeough/Dynamo/master/doc/distrib/Images/dynamo_logo_dark.png)
 Dynamo is a visual programming tool that aims to be accessible to both non-programmers and programmers alike. It gives users the ability to visually script behavior, define custom pieces of logic, and script using various textual programming languages.
 
