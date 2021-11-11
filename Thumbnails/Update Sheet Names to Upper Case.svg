@@ -8,7 +8,7 @@
    version="1.1"
    id="svg5"
    inkscape:version="1.1 (c68e22c387, 2021-05-23)"
-   sodipodi:docname="_template.svg"
+   sodipodi:docname="Update Sheet Names to Upper Case.svg"
    inkscape:export-filename="\\Prlx2\Proj\20043- Autodesk Generative Design Documentation + Testing\Deliverables\Scope 5\5.02-DynamoPlayerSamples\Thumbnails\AboutDynamoPlayer.png"
    inkscape:export-xdpi="320"
    inkscape:export-ydpi="320"
@@ -28,8 +28,8 @@
      showgrid="false"
      units="px"
      inkscape:zoom="1.5001964"
-     inkscape:cx="124.98364"
-     inkscape:cy="209.30593"
+     inkscape:cx="108.31915"
+     inkscape:cy="152.64668"
      inkscape:window-width="1918"
      inkscape:window-height="1018"
      inkscape:window-x="953"
@@ -92,30 +92,35 @@
        width="79.375"
        height="79.375"
        x="-1.0658141e-14"
-       y="-6.4392935e-15" />
+       y="-6.4392935e-15"
+       sodipodi:insensitive="true" />
     <text
        xml:space="preserve"
-       transform="matrix(0.28485641,0,0,0.28485641,-3.1346414,-19.377603)"
+       transform="matrix(0.26707672,0,0,0.26707672,1.9910147,-8.5168683)"
        id="text1440"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'Artifakt Element';-inkscape-font-specification:'Artifakt Element, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect1442);fill:#000000;fill-opacity:1;stroke:none"
        x="112.27985"
        y="0"><tspan
          x="27.064926"
          y="122.85625"
-         id="tspan8888"><tspan
+         id="tspan8951"><tspan
            style="text-align:center;text-anchor:middle"
-           id="tspan8886">Sheet Name</tspan></tspan></text>
+           id="tspan8949">Sheet Name</tspan></tspan></text>
     <text
        xml:space="preserve"
-       transform="matrix(0.28485641,0,0,0.28485641,-9.4765823,20.623893)"
+       transform="matrix(0.26707672,0,0,0.26707672,-3.9550854,30.066892)"
        id="text1440-2"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'Artifakt Element';-inkscape-font-specification:'Artifakt Element, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect1442-77);fill:#000000;fill-opacity:1;stroke:none"
        x="120.43982"
        y="0"><tspan
          x="41.168602"
          y="122.85625"
-         id="tspan8892"><tspan
+         id="tspan8955"><tspan
            style="text-align:center;text-anchor:middle"
-           id="tspan8890">SHEET NAME</tspan></tspan></text>
+           id="tspan8953">SHEET NAME</tspan></tspan></text>
+    <path
+       d="m 44.045002,42.510011 a 0.71604381,0.71604381 0 0 0 -1.016781,0 l -2.59924,2.599238 V 30.487634 A 0.71604381,0.71604381 0 0 0 39.712938,29.77159 v 0 a 0.71604381,0.71604381 0 0 0 -0.716044,0.716044 v 14.614455 l -2.592079,-2.592078 a 0.71604381,0.71604381 0 1 0 -0.988141,1.00962 l 2.806892,2.806893 a 2.1481314,2.1481314 0 0 0 3.036026,0 l 2.806892,-2.806893 a 0.71604381,0.71604381 0 0 0 -0.02148,-1.00962 z"
+       id="path8923"
+       style="stroke-width:0.716046" />
   </g>
 </svg>
