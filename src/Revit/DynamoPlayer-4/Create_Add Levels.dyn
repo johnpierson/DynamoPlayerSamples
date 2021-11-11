@@ -2,7 +2,7 @@
   "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
   "IsCustomNode": false,
   "Description": "",
-  "Name": "Add Levels Above Or Below Selected Level",
+  "Name": "Add Levels",
   "ElementResolver": {
     "ResolutionMap": {
       "Math": {
@@ -264,7 +264,7 @@
   ],
   "Dependencies": [],
   "NodeLibraryDependencies": [],
-  "Thumbnail": null,
+  "Thumbnail": "",
   "GraphDocumentationURL": null,
   "ExtensionWorkspaceData": [
     {
@@ -369,7 +369,7 @@
     "Annotations": [
       {
         "Id": "da1cd88c233b4582a11bca31bb493c92",
-        "Title": "Add Levels",
+        "Title": "Create Levels",
         "DescriptionText": "Add Levels Above or Below Selected Level",
         "IsExpanded": true,
         "WidthAdjustment": 0.0,
@@ -384,7 +384,7 @@
         "Height": 497.0,
         "FontSize": 36.0,
         "InitialTop": 1445.2334797456929,
-        "InitialHeight": 166.0,
+        "InitialHeight": 145.0,
         "TextblockHeight": 63.0,
         "Background": "#FFD8D8D8"
       },
@@ -406,7 +406,7 @@
         "Height": 260.0,
         "FontSize": 24.0,
         "InitialTop": 1431.885506864206,
-        "InitialHeight": 231.0,
+        "InitialHeight": 210.0,
         "TextblockHeight": 49.0,
         "Background": "#FFC1D676"
       },
@@ -428,7 +428,7 @@
         "Height": 339.96693135481996,
         "FontSize": 24.0,
         "InitialTop": 1719.74031644677,
-        "InitialHeight": 301.966931354819,
+        "InitialHeight": 280.96693135481996,
         "TextblockHeight": 58.0,
         "Background": "#FFC1D676"
       },
@@ -449,7 +449,7 @@
         "Height": 289.0,
         "FontSize": 24.0,
         "InitialTop": 1738.2841505459564,
-        "InitialHeight": 231.0,
+        "InitialHeight": 145.0,
         "TextblockHeight": 78.0,
         "Background": "#FFD8D8D8"
       },
@@ -470,7 +470,7 @@
         "Height": 234.0,
         "FontSize": 24.0,
         "InitialTop": 1496.4325957391666,
-        "InitialHeight": 196.0,
+        "InitialHeight": 145.0,
         "TextblockHeight": 58.0,
         "Background": "#FFFFAA45"
       },
@@ -491,7 +491,7 @@
         "Height": 375.0,
         "FontSize": 36.0,
         "InitialTop": 1501.20434111566,
-        "InitialHeight": 332.0,
+        "InitialHeight": 145.0,
         "TextblockHeight": 63.0,
         "Background": "#FFD8D8D8"
       },
@@ -535,8 +535,8 @@
         "Background": "#FFC1D676"
       }
     ],
-    "X": -477.60689056850686,
-    "Y": -765.93991030213476,
-    "Zoom": 0.70345162515342929
+    "X": -600.84556528837152,
+    "Y": -1301.1305890151784,
+    "Zoom": 1.0975423492824667
   }
 }
