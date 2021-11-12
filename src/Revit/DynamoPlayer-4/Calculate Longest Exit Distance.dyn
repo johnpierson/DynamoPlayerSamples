@@ -401,14 +401,7 @@
     "warningCount": 0,
     "errorCount": 0
   },
-  "Bindings": [
-    {
-      "NodeId": "5f5a20ba-4bf5-4576-a830-82245b3183bc",
-      "Binding": {
-        "LongestOfShortestExitPaths_InClassDecl-1_InFunctionScope-1_Instance0_5f5a20ba-4bf5-4576-a830-82245b3183bc": "PFNPQVAtRU5WOkVudmVsb3BlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOlNPQVAtRU5DPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VuY29kaW5nLyIgeG1sbnM6U09BUC1FTlY9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3NvYXAvZW52ZWxvcGUvIiB4bWxuczpjbHI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vc29hcC9lbmNvZGluZy9jbHIvMS4wIiBTT0FQLUVOVjplbmNvZGluZ1N0eWxlPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VuY29kaW5nLyI+DQo8U09BUC1FTlY6Qm9keT4NCjxhMTpDYWxsU2l0ZV94MDAyQl9UcmFjZVNlcmlhbGlzZXJIZWxwZXIgaWQ9InJlZi0xIiB4bWxuczphMT0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9jbHIvbnNhc3NlbS9Qcm90b0NvcmUvUHJvdG9Db3JlJTJDJTIwVmVyc2lvbiUzRDIuMTMuMC4zMTM1JTJDJTIwQ3VsdHVyZSUzRG5ldXRyYWwlMkMlMjBQdWJsaWNLZXlUb2tlbiUzRG51bGwiPg0KPE51bWJlck9mRWxlbWVudHM+MTwvTnVtYmVyT2ZFbGVtZW50cz4NCjxCYXNlLTBfSGFzRGF0YT50cnVlPC9CYXNlLTBfSGFzRGF0YT4NCjxCYXNlLTBfRGF0YSBpZD0icmVmLTMiPlBGTlBRVkF0UlU1V09rVnVkbVZzYjNCbElIaHRiRzV6T25oemFUMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFdGFXNXpkR0Z1WTJVaUlIaHRiRzV6T25oelpEMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFaUlIaHRiRzV6T2xOUFFWQXRSVTVEUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUlnZUcxc2JuTTZVMDlCVUMxRlRsWTlJbWgwZEhBNkx5OXpZMmhsYldGekxuaHRiSE52WVhBdWIzSm5MM052WVhBdlpXNTJaV3h2Y0dVdklpQjRiV3h1Y3pwamJISTlJbWgwZEhBNkx5OXpZMmhsYldGekxtMXBZM0p2YzI5bWRDNWpiMjB2YzI5aGNDOWxibU52WkdsdVp5OWpiSEl2TVM0d0lpQlRUMEZRTFVWT1ZqcGxibU52WkdsdVoxTjBlV3hsUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUkrRFFvOFUwOUJVQzFGVGxZNlFtOWtlVDROQ2p4aE1UcE5kV3gwYVhCc1pWTmxjbWxoYkdsNllXSnNaVWxrSUdsa1BTSnlaV1l0TVNJZ2VHMXNibk02WVRFOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZZMnh5TDI1ellYTnpaVzB2VW1WMmFYUlRaWEoyYVdObGN5NVFaWEp6YVhOMFpXNWpaUzlTWlhacGRGTmxjblpwWTJWekpUSkRKVEl3Vm1WeWMybHZiaVV6UkRJdU1USXVNQzQxTnpRd0pUSkRKVEl3UTNWc2RIVnlaU1V6Ukc1bGRYUnlZV3dsTWtNbE1qQlFkV0pzYVdOTFpYbFViMnRsYmlVelJHNTFiR3dpUGcwS1BHNTFiV0psY2s5bVJXeGxiV1Z1ZEhNK01Ud3ZiblZ0WW1WeVQyWkZiR1Z0Wlc1MGN6NE5Danh6ZEhKcGJtZEpSQzB3SUdsa1BTSnlaV1l0TXlJK09EYzBOREUzTURNdE4yVTJNUzAwTlRJNUxXSmhORE10TXpWbVpUaGpZMlk1WVRnMExUQXdNRFpqTWpReVBDOXpkSEpwYm1kSlJDMHdQZzBLUEdsdWRFbEVMVEErTkRReU9UUTJQQzlwYm5SSlJDMHdQZzBLUEM5aE1UcE5kV3gwYVhCc1pWTmxjbWxoYkdsNllXSnNaVWxrUGcwS1BDOVRUMEZRTFVWT1ZqcENiMlI1UGcwS1BDOVRUMEZRTFVWT1ZqcEZiblpsYkc5d1pUNE5DZz09PC9CYXNlLTBfRGF0YT4NCjxCYXNlLTBfSGFzTmVzdGVkRGF0YT5mYWxzZTwvQmFzZS0wX0hhc05lc3RlZERhdGE+DQo8L2ExOkNhbGxTaXRlX3gwMDJCX1RyYWNlU2VyaWFsaXNlckhlbHBlcj4NCjwvU09BUC1FTlY6Qm9keT4NCjwvU09BUC1FTlY6RW52ZWxvcGU+DQo="
-      }
-    }
-  ],
+  "Bindings": [],
   "View": {
     "Dynamo": {
       "ScaleFactor": 1.0,
@@ -551,7 +544,7 @@
         "Height": 122.0,
         "FontSize": 36.0,
         "InitialTop": 935.25031398952831,
-        "InitialHeight": 471.55485768527615,
+        "InitialHeight": 145.00000000000011,
         "TextblockHeight": 63.0,
         "Background": "#FFFFFFFF"
       },
@@ -575,7 +568,7 @@
         "Height": 239.0,
         "FontSize": 36.0,
         "InitialTop": 1163.0239152156792,
-        "InitialHeight": 196.0,
+        "InitialHeight": 145.0,
         "TextblockHeight": 63.0,
         "Background": "#FFE8F7AD"
       },
@@ -592,13 +585,13 @@
         ],
         "HasNestedGroups": false,
         "Left": -5729.4648420277581,
-        "Top": 1015.3396447757079,
+        "Top": 1015.539644775708,
         "Width": 286.0,
-        "Height": 425.03360534597005,
+        "Height": 424.83360534597,
         "FontSize": 36.0,
         "InitialTop": 1126.3396447757079,
-        "InitialHeight": 344.03360534597005,
-        "TextblockHeight": 101.0,
+        "InitialHeight": 304.03360534597005,
+        "TextblockHeight": 100.80000000000001,
         "Background": "#FFFFB8D8"
       },
       {
@@ -619,7 +612,7 @@
         "Height": 217.99999999999989,
         "FontSize": 36.0,
         "InitialTop": 917.13757561405794,
-        "InitialHeight": 166.0,
+        "InitialHeight": 145.0,
         "TextblockHeight": 72.0,
         "Background": "#FFE8F7AD"
       },
@@ -640,7 +633,7 @@
         "Height": 238.99999999999989,
         "FontSize": 36.0,
         "InitialTop": 982.96326092532638,
-        "InitialHeight": 195.99999999999989,
+        "InitialHeight": 144.99999999999989,
         "TextblockHeight": 63.0,
         "Background": "#FFFFC999"
       },
@@ -664,8 +657,8 @@
         "Background": "#FFC1D676"
       }
     ],
-    "X": 3543.1349117784689,
-    "Y": -319.69579923772454,
-    "Zoom": 0.63895112174333113
+    "X": 6882.7778857737185,
+    "Y": -1020.7856395867527,
+    "Zoom": 1.1575958400520741
   }
 }
