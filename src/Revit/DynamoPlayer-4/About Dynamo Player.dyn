@@ -1,8 +1,8 @@
 {
   "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
   "IsCustomNode": false,
-  "Description": "Generates a popup to describe what Dynamo player can do.",
-  "Name": "▶ About Dynamo Player",
+  "Description": "This workflow pops up a message about Dynamo Player.",
+  "Name": "About Dynamo Player",
   "ElementResolver": {
     "ResolutionMap": {}
   },
@@ -25,7 +25,7 @@
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "f8bf96b64e364d1e99f87d97f5190871",
+          "Id": "6de05585750a42fe8b34ef858c307ca5",
           "Name": "",
           "Description": "Value of expression at line 1",
           "UsingDefaultValue": false,
@@ -86,7 +86,7 @@
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "a65b29caa33540eaab8abe83e8f9ba6e",
+          "Id": "593b1ebd26824527aab7f4c1b6fae3b9",
           "Name": "",
           "Description": "Value of expression at line 1",
           "UsingDefaultValue": false,
@@ -130,7 +130,7 @@
   ],
   "Connectors": [
     {
-      "Start": "f8bf96b64e364d1e99f87d97f5190871",
+      "Start": "6de05585750a42fe8b34ef858c307ca5",
       "End": "5f21b8ecbcb6464e87b3913aec20133d",
       "Id": "6907f58f48ba43f1b7c872c2b75e1d61",
       "IsHidden": "False"
@@ -142,7 +142,7 @@
       "IsHidden": "False"
     },
     {
-      "Start": "a65b29caa33540eaab8abe83e8f9ba6e",
+      "Start": "593b1ebd26824527aab7f4c1b6fae3b9",
       "End": "2844c1784a974ae496789919101e9cb9",
       "Id": "b0e893c8f745454795fe2f043c30cf85",
       "IsHidden": "False"
@@ -174,7 +174,7 @@
       "HasRunWithoutCrash": true,
       "IsVisibleInDynamoLibrary": true,
       "Version": "2.13.0.3135",
-      "RunType": "Automatic",
+      "RunType": "Manual",
       "RunPeriod": "1000"
     },
     "Camera": {
@@ -198,8 +198,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -219.65491451676718,
-        "Y": 639.92688720164654
+        "X": -203.987500681608,
+        "Y": 639.926887201647
       },
       {
         "ShowGeometry": true,
@@ -218,8 +218,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 80.012499318391519,
-        "Y": 783.66714124277564
+        "X": 80.0124993183915,
+        "Y": 783.667141242776
       },
       {
         "ShowGeometry": true,
@@ -235,7 +235,7 @@
     "Annotations": [
       {
         "Id": "3920cfe9383c4cabbe37608ec616a820",
-        "Title": "Press Play",
+        "Title": "About",
         "DescriptionText": "Dynamo Player Preview Graph",
         "IsExpanded": true,
         "WidthAdjustment": 0.0,
@@ -244,27 +244,27 @@
           "4dbdc64b7f3a4e9cbff457a46b00052b"
         ],
         "HasNestedGroups": false,
-        "Left": -202.38864620543973,
-        "Top": 104.44158056740923,
+        "Left": -201.5021626414881,
+        "Top": 367.12258732792037,
         "Width": 312.0,
-        "Height": 526.0,
+        "Height": 252.00000000000006,
         "FontSize": 36.0,
-        "InitialTop": 177.44158056740923,
+        "InitialTop": 440.12258732792037,
         "InitialHeight": 145.0,
         "TextblockHeight": 63.0,
         "Background": "#FFD8D8D8"
       },
       {
         "Id": "4dbdc64b7f3a4e9cbff457a46b00052b",
-        "Title": "CATEGORY:\r\nAdministration\r\n\r\nDESCRIPTION:\r\nThis workflow pops up a message about Dynamo Player.\r\n\r\nThe Dynamo Player application executes Dynamo graphs in the Revit environment. Dynamo graphs can be written to perform many complex functions in Revit, some of which can be very useful to minimize repetitive and time consuming tasks, to run model checks, or to extract and utilize information from the Revit model. Learn more at http://dynamobim.org.\r\n\r\nMODEL PREPARATION:\r\n- None\r\n\r\nNOTE:\r\n - None\r\n\r\nAUTHORS:\r\n- Autodesk\r\n\r\nCopyright(c) 2021, Autodesk\r\n\r\nREQUIRED PACKAGES:\r\n- None",
+        "Title": "\r\nThe Dynamo Player application executes Dynamo graphs in the Revit environment. Dynamo graphs can be written to perform many complex functions in Revit, some of which can be very useful to minimize repetitive and time consuming tasks, to run model checks, or to extract and utilize information from the Revit model. Learn more at http://dynamobim.org.\r\n",
         "DescriptionText": null,
         "IsExpanded": true,
         "WidthAdjustment": 0.0,
         "HeightAdjustment": 0.0,
         "Nodes": [],
         "HasNestedGroups": false,
-        "Left": -192.38864620543973,
-        "Top": 177.44158056740923,
+        "Left": -191.5021626414881,
+        "Top": 440.12258732792037,
         "Width": 0.0,
         "Height": 0.0,
         "FontSize": 36.0,
@@ -274,8 +274,8 @@
         "Background": "#FFC1D676"
       }
     ],
-    "X": 180.18520795087016,
-    "Y": -24.513714832244716,
-    "Zoom": 0.66339195600652212
+    "X": 141.91479695139753,
+    "Y": 12.993910882518946,
+    "Zoom": 0.65150603752531167
   }
 }
