@@ -28,8 +28,8 @@
     {
       "Id": "96c4208aed0e4c8ea8389cec1caef934",
       "Name": "Calculation Results",
-      "Type": "unknown",
-      "InitialValue": "",
+      "Type": "string",
+      "InitialValue": "Selected Curves: 3\nTotal Length: 16560.663176 Millimeters",
       "Description": "Visualize the node's output"
     }
   ],
@@ -418,7 +418,7 @@
       "Id": "2186293a99d040788a8b39d65cf50501",
       "Inputs": [
         {
-          "Id": "ce86551749484e70ac764e6e29e07117",
+          "Id": "e15e54fbd25a40f4b22a86f4c33ee1e3",
           "Name": "curveCount",
           "Description": "curveCount",
           "UsingDefaultValue": false,
@@ -427,7 +427,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "12c4d7f079b44ee48d858fc13cb759c6",
+          "Id": "e2f3ff1ac6884f05ab32e98f3a87eac3",
           "Name": "totalLength",
           "Description": "totalLength",
           "UsingDefaultValue": false,
@@ -436,7 +436,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "5b69d59c38914a5f885c3ef2a3dcad25",
+          "Id": "3bc853e49e1b496db3b4003d8366f76d",
           "Name": "units",
           "Description": "units",
           "UsingDefaultValue": false,
@@ -447,7 +447,7 @@
       ],
       "Outputs": [
         {
-          "Id": "63c302c85521421ea253062a7b1e1e05",
+          "Id": "656886d86f0c4942a8f6cdeb2edd944c",
           "Name": "",
           "Description": "Value of expression at line 2",
           "UsingDefaultValue": false,
@@ -456,7 +456,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "dc05ec3bcba447ada0c40499c261f465",
+          "Id": "5a4ddaea74624358955161062231da67",
           "Name": "",
           "Description": "Value of expression at line 3",
           "UsingDefaultValue": false,
@@ -465,7 +465,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "791ce61df78f484ab46a2030d3e54c4f",
+          "Id": "31f3a853631b4cb583fa7ba8099d34b5",
           "Name": "",
           "Description": "Value of expression at line 4",
           "UsingDefaultValue": false,
@@ -474,7 +474,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "e62aa6fd0d0d45cf952bea29630601ca",
+          "Id": "451f7539bf964bc28207e21c7b4b7dc6",
           "Name": "",
           "Description": "Value of expression at line 7",
           "UsingDefaultValue": false,
@@ -520,7 +520,7 @@
     },
     {
       "Start": "901761c3cdbc4e2fae8becd89fc62dcc",
-      "End": "12c4d7f079b44ee48d858fc13cb759c6",
+      "End": "e2f3ff1ac6884f05ab32e98f3a87eac3",
       "Id": "f4c4079c0d4f41249a0ea0a267ea0aa0",
       "IsHidden": "False"
     },
@@ -538,7 +538,7 @@
     },
     {
       "Start": "9e22baae7310464f87e4a242fb127db3",
-      "End": "5b69d59c38914a5f885c3ef2a3dcad25",
+      "End": "3bc853e49e1b496db3b4003d8366f76d",
       "Id": "6e4f6474277d48a388a67162c24a9bd3",
       "IsHidden": "False"
     },
@@ -550,7 +550,7 @@
     },
     {
       "Start": "b0b842b1370f42d5a9b5732dc248f72a",
-      "End": "ce86551749484e70ac764e6e29e07117",
+      "End": "e15e54fbd25a40f4b22a86f4c33ee1e3",
       "Id": "51b7a8a814e14591bbc8c7b366d6e711",
       "IsHidden": "False"
     },
@@ -579,7 +579,7 @@
       "IsHidden": "False"
     },
     {
-      "Start": "e62aa6fd0d0d45cf952bea29630601ca",
+      "Start": "451f7539bf964bc28207e21c7b4b7dc6",
       "End": "740a7e7e4a724692a8f31e0668e24e6b",
       "Id": "e0d3981262fd4930bfcf12079f98f3a0",
       "IsHidden": "False"
@@ -588,7 +588,7 @@
   "Dependencies": [],
   "NodeLibraryDependencies": [],
   "Thumbnail": "",
-  "GraphDocumentationURL": null,
+  "GraphDocumentationURL": "https://dynamobim.org",
   "ExtensionWorkspaceData": [
     {
       "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
@@ -675,8 +675,8 @@
         "IsSetAsInput": true,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 1540.956385939103,
-        "Y": 1685.3516160212403
+        "X": 1542.1895456353343,
+        "Y": 1697.6832129835536
       },
       {
         "ShowGeometry": true,
@@ -715,8 +715,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": true,
         "Excluded": false,
-        "X": 4715.7920749493014,
-        "Y": 1647.8967861117515
+        "X": 4679.14137690959,
+        "Y": 1647.89678611175
       },
       {
         "ShowGeometry": true,
@@ -755,8 +755,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 4091.7073918034412,
-        "Y": 1647.8967861117515
+        "X": 4091.70739180344,
+        "Y": 1647.89678611175
       }
     ],
     "Annotations": [
@@ -839,12 +839,12 @@
           "2186293a99d040788a8b39d65cf50501"
         ],
         "HasNestedGroups": false,
-        "Left": 4081.7073918034412,
-        "Top": 1581.8967861117515,
-        "Width": 916.08468314586025,
+        "Left": 4081.70739180344,
+        "Top": 1581.89678611175,
+        "Width": 879.43398510615,
         "Height": 368.0,
         "FontSize": 30.0,
-        "InitialTop": 1647.8967861117515,
+        "InitialTop": 1647.89678611175,
         "InitialHeight": 145.0,
         "TextblockHeight": 56.0,
         "Background": "#FFFFC999"
@@ -884,12 +884,12 @@
           "eabf2fb314eb43288701591d62caf0a1"
         ],
         "HasNestedGroups": false,
-        "Left": 1530.956385939103,
-        "Top": 1626.3516160212403,
+        "Left": 1532.1895456353343,
+        "Top": 1638.6832129835536,
         "Width": 540.99999999999977,
         "Height": 195.0,
         "FontSize": 24.0,
-        "InitialTop": 1685.3516160212403,
+        "InitialTop": 1697.6832129835536,
         "InitialHeight": 145.0,
         "TextblockHeight": 49.0,
         "Background": "#FFFFB8D8"
@@ -954,8 +954,8 @@
         "Background": "#FFC1D676"
       }
     ],
-    "X": -1025.7485528750415,
-    "Y": -711.76569549455792,
-    "Zoom": 0.79626704907312318
+    "X": -1903.4226401214305,
+    "Y": -1767.8197574626377,
+    "Zoom": 1.4066417042126167
   }
 }
