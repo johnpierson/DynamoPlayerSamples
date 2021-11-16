@@ -103,9 +103,9 @@
        y="0"><tspan
          x="27.064926"
          y="122.85625"
-         id="tspan8977"><tspan
+         id="tspan877"><tspan
            style="text-align:center;text-anchor:middle"
-           id="tspan8975">Sheet Name</tspan></tspan></text>
+           id="tspan875">Sheet Name</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.26707672,0,0,0.26707672,-3.9550854,30.066892)"
@@ -115,12 +115,12 @@
        y="0"><tspan
          x="41.168602"
          y="122.85625"
-         id="tspan8981"><tspan
+         id="tspan881"><tspan
            style="text-align:center;text-anchor:middle"
-           id="tspan8979">SHEET NAME</tspan></tspan></text>
+           id="tspan879">SHEET NAME</tspan></tspan></text>
     <path
        d="m 44.045002,42.510011 a 0.71604381,0.71604381 0 0 0 -1.016781,0 l -2.59924,2.599238 V 30.487634 A 0.71604381,0.71604381 0 0 0 39.712938,29.77159 v 0 a 0.71604381,0.71604381 0 0 0 -0.716044,0.716044 v 14.614455 l -2.592079,-2.592078 a 0.71604381,0.71604381 0 1 0 -0.988141,1.00962 l 2.806892,2.806893 a 2.1481314,2.1481314 0 0 0 3.036026,0 l 2.806892,-2.806893 a 0.71604381,0.71604381 0 0 0 -0.02148,-1.00962 z"
        id="path8923"
-       style="stroke-width:0.716046" />
+       style="stroke-width:0.716046;fill:#00ff00" />
   </g>
 </svg>
