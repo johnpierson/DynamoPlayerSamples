@@ -9,7 +9,7 @@
    id="svg5"
    inkscape:version="1.1 (c68e22c387, 2021-05-23)"
    sodipodi:docname="Calculate Total Length of Selected Lines.svg"
-   inkscape:export-filename="\\Prlx2\Proj\20043- Autodesk Generative Design Documentation + Testing\Deliverables\Scope 5\5.02-DynamoPlayerSamples\Thumbnails\AboutDynamoPlayer.png"
+   inkscape:export-filename="\\Prlx2\Proj\20043- Autodesk Generative Design Documentation + Testing\Deliverables\Scope 5\5.02-DynamoPlayerSamples\Thumbnails\Calculate Total Length of Selected Lines.png"
    inkscape:export-xdpi="320"
    inkscape:export-ydpi="320"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -28,7 +28,7 @@
      showgrid="false"
      units="px"
      inkscape:zoom="2.1215981"
-     inkscape:cx="196.31428"
+     inkscape:cx="196.78562"
      inkscape:cy="175.81087"
      inkscape:window-width="1918"
      inkscape:window-height="1018"
@@ -128,7 +128,7 @@
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect6095);fill:#5f835d;fill-opacity:1;stroke:none"><tspan
          x="85.988281"
          y="111.81743"
-         id="tspan6618">x' </tspan></text>
+         id="tspan879">x' </tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,0.18251233,-0.18251233,0,86.545184,28.448233)"
@@ -138,7 +138,7 @@
        inkscape:transform-center-y="-2.9930269"><tspan
          x="85.988281"
          y="111.81743"
-         id="tspan6620">x' </tspan></text>
+         id="tspan881">x' </tspan></text>
     <path
        style="fill:none;stroke:#5f835d;stroke-width:0.335;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 7.8622473,21.65327 11.065043,18.450475"
