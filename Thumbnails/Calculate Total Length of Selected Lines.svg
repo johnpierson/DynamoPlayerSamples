@@ -36,7 +36,7 @@
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1"
-     showguides="true"
+     showguides="false"
      inkscape:guide-bbox="true">
     <sodipodi:guide
        position="73.186163,5.7907869"
@@ -128,7 +128,7 @@
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect6095);fill:#5f835d;fill-opacity:1;stroke:none"><tspan
          x="85.988281"
          y="111.81743"
-         id="tspan6569">x' </tspan></text>
+         id="tspan6618">x' </tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,0.18251233,-0.18251233,0,86.545184,28.448233)"
@@ -138,7 +138,7 @@
        inkscape:transform-center-y="-2.9930269"><tspan
          x="85.988281"
          y="111.81743"
-         id="tspan6571">x' </tspan></text>
+         id="tspan6620">x' </tspan></text>
     <path
        style="fill:none;stroke:#5f835d;stroke-width:0.335;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 7.8622473,21.65327 11.065043,18.450475"
