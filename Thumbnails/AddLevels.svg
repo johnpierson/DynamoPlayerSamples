@@ -28,8 +28,8 @@
      showgrid="false"
      units="px"
      inkscape:zoom="2.1215981"
-     inkscape:cx="336.30309"
-     inkscape:cy="169.21207"
+     inkscape:cx="310.37924"
+     inkscape:cy="171.56878"
      inkscape:window-width="1918"
      inkscape:window-height="1018"
      inkscape:window-x="953"
@@ -266,7 +266,7 @@
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect28855);fill:#5f835d;fill-opacity:1;stroke:none"><tspan
          x="105.58008"
          y="143.96001"
-         id="tspan2309">+</tspan></text>
+         id="tspan4106">+</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.20866266,0,0,0.20866266,14.241659,34.099869)"
@@ -274,7 +274,7 @@
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect28855-3);fill:#5f835d;fill-opacity:1;stroke:none"><tspan
          x="105.58008"
          y="143.96001"
-         id="tspan2311">+</tspan></text>
+         id="tspan4108">+</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.20866266,0,0,0.20866266,14.241659,5.4998355)"
@@ -282,7 +282,7 @@
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect28855-30);fill:#5f835d;fill-opacity:1;stroke:none"><tspan
          x="105.58008"
          y="143.96001"
-         id="tspan2313">+</tspan></text>
+         id="tspan4110">+</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.20866266,0,0,0.20866266,14.241659,-8.8001819)"
@@ -290,6 +290,13 @@
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect28855-9);fill:#5f835d;fill-opacity:1;stroke:none"><tspan
          x="105.58008"
          y="143.96001"
-         id="tspan2315">+</tspan></text>
+         id="tspan4112">+</tspan></text>
+    <rect
+       style="fill:#5f835d;fill-opacity:1;fill-rule:evenodd;stroke-width:0.665001;stroke-linecap:round"
+       id="rect2339"
+       width="21.450026"
+       height="9.7273369"
+       x="92.659126"
+       y="26.812532" />
   </g>
 </svg>
