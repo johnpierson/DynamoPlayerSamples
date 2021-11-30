@@ -40,8 +40,8 @@
     {
       "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
       "NodeType": "PythonScriptNode",
-      "Code": "#This script pops up a dialog box with a message from the previous node.\r\nimport clr\r\nclr.AddReference('RevitAPIUI')\r\n\r\nfrom Autodesk.Revit.UI import TaskDialog\r\n\r\nmainText = IN[0]\r\nfooterText = IN[1]\r\n\r\nmessagePop = TaskDialog(\"Dynamo Player\")\r\nmessagePop.MainContent = mainText + \"\\n\\n\" + \"<a href=\\\"http://dynamobim.org/ \\\">\" + footerText + \"</a>\";\r\n\r\nmessagePop.Show()\r\n\r\nOUT = \"Success!\"",
-      "Engine": "IronPython2",
+      "Code": "#This script pops up a dialog box with a message from the previous node.\r\nimport clr\r\nclr.AddReference('RevitAPIUI')\r\n\r\nfrom Autodesk.Revit.UI import TaskDialog\r\n\r\nmainText = IN[0]\r\nfooterText = IN[1]\r\n\r\ncontent = mainText + \"\\n\\n\" + footerText;\r\n\r\nTaskDialog.Show(\"Dynamo Player\",content)\r\n\r\nOUT = \"Success!\"",
+      "Engine": "CPython3",
       "VariableInputPorts": true,
       "Id": "2f5e2b09e28c45de98e42fcf3da8879c",
       "Inputs": [
@@ -58,6 +58,15 @@
           "Id": "2844c1784a974ae496789919101e9cb9",
           "Name": "IN[1]",
           "Description": "Input #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e8493f0328854d32abb829dcf2236278",
+          "Name": "IN[2]",
+          "Description": "Input #2",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -250,7 +259,7 @@
         "Height": 252.00000000000006,
         "FontSize": 36.0,
         "InitialTop": 440.12258732792037,
-        "InitialHeight": 145.0,
+        "InitialHeight": 145.00000000000006,
         "TextblockHeight": 63.0,
         "Background": "#FFD8D8D8"
       },
@@ -274,8 +283,8 @@
         "Background": "#FFC1D676"
       }
     ],
-    "X": 141.91479695139753,
-    "Y": 12.993910882518946,
-    "Zoom": 0.65150603752531167
+    "X": 29.626545019804098,
+    "Y": -217.08656506361439,
+    "Zoom": 0.97227658841504883
   }
 }
