@@ -20,8 +20,8 @@
     {
       "Id": "96c4208aed0e4c8ea8389cec1caef934",
       "Name": "Calculation Results",
-      "Type": "string",
-      "InitialValue": "Selected Curves: 5\nTotal Length: 44888.774 Millimeters",
+      "Type": "unknown",
+      "InitialValue": "",
       "Description": "Visualize the node's output"
     }
   ],
@@ -804,7 +804,7 @@
         "Y": 1459.1583764067104
       },
       {
-        "Name": "ConvertLength.ToFeet",
+        "Name": "GetProjectUnits",
         "ShowGeometry": true,
         "Id": "c337fa3eb38f4b39a6cb9b91076b69a0",
         "IsSetAsInput": false,
@@ -1005,13 +1005,13 @@
         ],
         "HasNestedGroups": false,
         "Left": 2972.82914438162,
-        "Top": 1862.6967651027699,
-        "Width": 255.19999999999982,
-        "Height": 209.0,
+        "Top": 1853.09676510277,
+        "Width": 211.19999999999982,
+        "Height": 218.59999999999991,
         "FontSize": 36.0,
         "InitialTop": 1935.09676510277,
         "InitialHeight": 145.0,
-        "TextblockHeight": 62.4,
+        "TextblockHeight": 72.0,
         "Background": "#FFE8F7AD"
       },
       {
@@ -1081,8 +1081,8 @@
         "Background": "#FFC1D676"
       }
     ],
-    "X": -556.00162998840108,
-    "Y": -104.67501533480879,
-    "Zoom": 0.35229190792028758
+    "X": -1760.9755857169414,
+    "Y": -721.81181549742939,
+    "Zoom": 0.66057261586076366
   }
 }
