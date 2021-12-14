@@ -1,0 +1,1609 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "This workflow gets all elements from Revit MEP categories in the model, and sets their Mark parameter values to empty.",
+  "Name": "Delete Mark Values from MEP Content",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [
+    {
+      "Id": "55efa24da507497baad4efe7581a25c8",
+      "Name": "Result",
+      "Type": "unknown",
+      "InitialValue": "",
+      "Description": "Visualize the node's output"
+    }
+  ],
+  "Nodes": [
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 16,
+      "SelectedString": "OST_DuctTerminal",
+      "NodeType": "ExtensionNode",
+      "Id": "ee2acf6934dd45688cc2172f046ba977",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "27c71a54655e4b9c9de4593a0b44c627",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.SetParameterByName@string,var",
+      "Id": "8ebb0c7a9f6f43cbb28f63d334707964",
+      "Inputs": [
+        {
+          "Id": "9bd1883d152643d49d25bae92e707483",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "75516fc606944a31aa0060a6d3031599",
+          "Name": "parameterName",
+          "Description": "The name of the parameter to set.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7552d6cfbdf34366b44e9f72634cd298",
+          "Name": "value",
+          "Description": "The value.\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0215169250854fac9ee93cefeda84fbf",
+          "Name": "Element",
+          "Description": "Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Set one of the element's parameters.\n\nElement.SetParameterByName (parameterName: string, value: var): Element"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.StringInput, CoreNodeModels",
+      "NodeType": "StringInputNode",
+      "InputValue": "Mark",
+      "Id": "b70b2ad920854e4fb4236b11920c4aab",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "a0c36414ead6411dad03285bdc07cebc",
+          "Name": "",
+          "Description": "String",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a string."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.StringInput, CoreNodeModels",
+      "NodeType": "StringInputNode",
+      "InputValue": "",
+      "Id": "88598273d3bb4971b898756122a833c4",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c700a2846040407f9e644b7def1636d9",
+          "Name": "",
+          "Description": "String",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a string."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "Id": "fafbc77f9d6d4bc58cc9fc7599f3a9c2",
+      "Inputs": [
+        {
+          "Id": "56cd0a34e2d64a7aa008eb132b80d489",
+          "Name": "Category",
+          "Description": "The Category",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c163616536254a8ab1e243baddb410dc",
+          "Name": "Elements",
+          "Description": "An element type.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Get all elements of the specified category from the model."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 337,
+      "SelectedString": "OST_MechanicalEquipment",
+      "NodeType": "ExtensionNode",
+      "Id": "07fad3e0055e476aacfe9287f4f45e67",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b3c7579bad824106b3961dedc94d1d84",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 207,
+      "SelectedString": "OST_DuctCurves",
+      "NodeType": "ExtensionNode",
+      "Id": "29970442ed3b4d4d847c79481631f477",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "0ae89dbcd00d4f14a76f83921a1fd44c",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 197,
+      "SelectedString": "OST_DuctFitting",
+      "NodeType": "ExtensionNode",
+      "Id": "0b9b014ede184de8801bf4a5eace9a13",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "f655b5ec48194887bd5519b67dc6803f",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.CreateList, CoreNodeModels",
+      "VariableInputPorts": true,
+      "NodeType": "ExtensionNode",
+      "Id": "7afe976c833e48c9b6e59bcf675b65f0",
+      "Inputs": [
+        {
+          "Id": "ce79fa33a36e4c40bc7ff2f0f9840c62",
+          "Name": "item0",
+          "Description": "Item Index #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "136ddc9877444a0393f83aa2103520b5",
+          "Name": "item1",
+          "Description": "Item Index #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "aea544546b0d4214bf952bbf5e1e7f9d",
+          "Name": "item2",
+          "Description": "Item Index #2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "25b2148ba9234dbe868b3362d4a1f154",
+          "Name": "item3",
+          "Description": "Item Index #3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6899f417b76f4f1c840a38bf37f1b05b",
+          "Name": "item4",
+          "Description": "Item Index #4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9d87ba222b3a432a9fb088cc5a7cdd87",
+          "Name": "item5",
+          "Description": "Item Index #5",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "56060a76b7fb44c0b3ef7ac47992426e",
+          "Name": "item6",
+          "Description": "Item Index #6",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5a621a0ee1144537a4b5af67dcc304e5",
+          "Name": "item7",
+          "Description": "Item Index #7",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "eed60f1703894f5888d96612b838b84b",
+          "Name": "item8",
+          "Description": "Item Index #8",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "903ddf453676439c9bb7ac1f6ab5f65f",
+          "Name": "item9",
+          "Description": "Item Index #9",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3be6247f30d94da6822f98ec408e31c3",
+          "Name": "item10",
+          "Description": "Item Index #10",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "482bc097224a44c2b3f627b27b4bc5cc",
+          "Name": "item11",
+          "Description": "Item Index #11",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "82f03818ce5a4bc68abd77a5e7ed1536",
+          "Name": "item12",
+          "Description": "Item Index #12",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9ba876247f04402a842f47cd0b17e0e1",
+          "Name": "item13",
+          "Description": "Item Index #13",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bdf4c31d59734643861d4bdba817ac04",
+          "Name": "item14",
+          "Description": "Item Index #14",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "273dd24359ad4933b159839efc70e393",
+          "Name": "item15",
+          "Description": "Item Index #15",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "328b21a00e774365a895583993946aee",
+          "Name": "item16",
+          "Description": "Item Index #16",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fc9d0d32742a4b809a2093716f66c81e",
+          "Name": "item17",
+          "Description": "Item Index #17",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0aec9af49c0343e1b3520bd094ee1e68",
+          "Name": "item18",
+          "Description": "Item Index #18",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5d37ffe080d04583b9ea7f16f30cc02d",
+          "Name": "item19",
+          "Description": "Item Index #19",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d84ed51faddb4c4ca3949ff7da42d688",
+          "Name": "item20",
+          "Description": "Item Index #20",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4edafccad10640f89e9f22d4869bc5f5",
+          "Name": "list",
+          "Description": "A list",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Makes a new list out of the given inputs"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 200,
+      "SelectedString": "OST_DuctInsulations",
+      "NodeType": "ExtensionNode",
+      "Id": "186ba189defe4028bbc7f8bfb92a090c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "938a483bb59b4b1f84c475c91a387391",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 202,
+      "SelectedString": "OST_DuctLinings",
+      "NodeType": "ExtensionNode",
+      "Id": "396b87e64e3048b48173367885b0f982",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "1c99a5f61c58491687db64785d9a7bb0",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 203,
+      "SelectedString": "OST_PlaceHolderDucts",
+      "NodeType": "ExtensionNode",
+      "Id": "7bf6d9277ea9470489d2bac3fb1f057e",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "2b4eb194b8e841e3ae22b8e5e09c867e",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 407,
+      "SelectedString": "OST_PlaceHolderPipes",
+      "NodeType": "ExtensionNode",
+      "Id": "f87af5227eea46d786ec3d79ce0ce15b",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "657c548c2d464ae6b2a81b7503a8f6b1",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 410,
+      "SelectedString": "OST_PipeCurves",
+      "NodeType": "ExtensionNode",
+      "Id": "32e80a594cd045a6aa1a9cb7f8cc9f6d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c4714a09426f486eafd40dc6fccd1fbe",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 406,
+      "SelectedString": "OST_PipeInsulations",
+      "NodeType": "ExtensionNode",
+      "Id": "c9f97334801c42c7b5a53f3832e260e0",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "3f9667f27c18428293ece7e8ec3ebbd7",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 403,
+      "SelectedString": "OST_PipeFitting",
+      "NodeType": "ExtensionNode",
+      "Id": "dc84b7bd66cf44e29246596e5d8bd29d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "0d0f192b842d4882a143013843f09e49",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 423,
+      "SelectedString": "OST_PlumbingFixtures",
+      "NodeType": "ExtensionNode",
+      "Id": "39dd0ddef2fe478eae76bbf6a26aa5e6",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "36b7d98ef02545e3adcc475f94310b47",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 212,
+      "SelectedString": "OST_ElectricalEquipment",
+      "NodeType": "ExtensionNode",
+      "Id": "2cf578f6ccc1472c96b193eccaa20906",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ad493a240b1f4acaab18cd51e3acfb91",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 216,
+      "SelectedString": "OST_ElectricalFixtures",
+      "NodeType": "ExtensionNode",
+      "Id": "4345ec46b55f414287e5f24ce3449557",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "913872651b5b4017bbf02848d8d68cce",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 151,
+      "SelectedString": "OST_CommunicationDevices",
+      "NodeType": "ExtensionNode",
+      "Id": "542b2aeab2b247f7a17b32286d81888f",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "d60fec84a20b43b7833de92d93ad3c6f",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 153,
+      "SelectedString": "OST_ConduitFitting",
+      "NodeType": "ExtensionNode",
+      "Id": "3b053bfb08204aa998a00df979cb7613",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "4541212b91ce4cc8b881b0602449dceb",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 155,
+      "SelectedString": "OST_ConduitRun",
+      "NodeType": "ExtensionNode",
+      "Id": "79f72cd3f34e43cda0ca9808f43e04a8",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "29b35f0df2d2488cb6b5f0e8dc847b0f",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 157,
+      "SelectedString": "OST_Conduit",
+      "NodeType": "ExtensionNode",
+      "Id": "fac6708815f34323b0a1dff64e708b50",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "bb2e1ec81b5045a68ef203521fb7ea76",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 710,
+      "SelectedString": "OST_Wire",
+      "NodeType": "ExtensionNode",
+      "Id": "f4cf6d5191a74588b95e9f252c32dc47",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b6fc5b2b08474d169e73cf1b2c835f50",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 291,
+      "SelectedString": "OST_LightingFixtures",
+      "NodeType": "ExtensionNode",
+      "Id": "07cd5e15154245d9b29def0fcc887bf0",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "a4ce3b78ecf54bae99c4a10e2f2f5a5d",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 289,
+      "SelectedString": "OST_LightingDevices",
+      "NodeType": "ExtensionNode",
+      "Id": "9312df898ec3418c9516b14bf4c1dd70",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "f461c78bff8a4de9891eedaae02adf4e",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Flatten@var[]..[],int",
+      "Id": "3a61ca8be22e487a9bea8ae8dc8425ec",
+      "Inputs": [
+        {
+          "Id": "ac23bc454fd7453483d09927bbb26127",
+          "Name": "list",
+          "Description": "List to flatten.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "526c8e0892b8462b9b3adae7eee208c2",
+          "Name": "amount",
+          "Description": "Layers of list nesting to remove (-1 will remove all list nestings)\n\nint\nDefault value : -1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7b34d5daea9d4e4781432a40b7fdfc23",
+          "Name": "list",
+          "Description": "Flattened list by amount",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Flattens a nested list of lists by a certain amount.\n\nList.Flatten (list: var[]..[], amount: int = -1): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Count@var[]..[]",
+      "Id": "28baa9444cb044c48122528066aa4412",
+      "Inputs": [
+        {
+          "Id": "bea410d389c541a9add169316bf37c65",
+          "Name": "list",
+          "Description": "List to get the item count of.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "121ab51374bf4b368654b7919c0e367f",
+          "Name": "int",
+          "Description": "List length.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Returns the number of items stored in the given list.\n\nList.Count (list: var[]..[]): int"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"Mark Values Cleared for\" + \" \" + count + \" \" + \"MEP Elements\";",
+      "Id": "8b1ed78a1ed34dbeaa42d96f341cd722",
+      "Inputs": [
+        {
+          "Id": "3286814f473343c08586f7c7be6cd52c",
+          "Name": "count",
+          "Description": "count",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7c8656437842494b8bbf04b3bb9e7b6b",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "55efa24da507497baad4efe7581a25c8",
+      "Inputs": [
+        {
+          "Id": "27564d2f966545b78d491378c8eb819b",
+          "Name": "",
+          "Description": "Node to show output from",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4cdade4d4a3b47c2918d84805de7ccd8",
+          "Name": "",
+          "Description": "Node output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the node's output"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "27c71a54655e4b9c9de4593a0b44c627",
+      "End": "ce79fa33a36e4c40bc7ff2f0f9840c62",
+      "Id": "f5a4ad88f7334fc4bd21cfec35e34cae",
+      "IsCollapsed": "False"
+    },
+    {
+      "Start": "0215169250854fac9ee93cefeda84fbf",
+      "End": "bea410d389c541a9add169316bf37c65",
+      "Id": "844e2892d7ee423e857c20832f528d29",
+      "IsCollapsed": "False"
+    },
+    {
+      "Start": "a0c36414ead6411dad03285bdc07cebc",
+      "End": "75516fc606944a31aa0060a6d3031599",
+      "Id": "6b5d26f542bd411199778ff15146d3e4",
+      "IsCollapsed": "False"
+    },
+    {
+      "Start": "c700a2846040407f9e644b7def1636d9",
+      "End": "7552d6cfbdf34366b44e9f72634cd298",
+      "Id": "464eb05b54b34f9ead473ea41668fdc8",
+      "IsCollapsed": "False"
+    },
+    {
+      "Start": "c163616536254a8ab1e243baddb410dc",
+      "End": "ac23bc454fd7453483d09927bbb26127",
+      "Id": "7946bc060b594db9854ff4a0bfc5b38a",
+      "IsCollapsed": "False"
+    },
+    {
+      "Start": "b3c7579bad824106b3961dedc94d1d84",
+      "End": "903ddf453676439c9bb7ac1f6ab5f65f",
+      "Id": "36cf5e6eff88437b833af98fd2675407",
+      "IsCollapsed": "False"
+    },
+    {
+      "Start": "0ae89dbcd00d4f14a76f83921a1fd44c",
+      "End": "9d87ba222b3a432a9fb088cc5a7cdd87",
+      "Id": "d5b4d3cb78744249b55214beb0936d57",
+      "IsCollapsed": "False"
+    },
+    {
+      "Start": "f655b5ec48194887bd5519b67dc6803f",
+      "End": "136ddc9877444a0393f83aa2103520b5",
+      "Id": "f1be5de3e55a4419b43334ff6cfcb965",
+      "IsCollapsed": "False"
+    },
+    {
+      "Start": "4edafccad10640f89e9f22d4869bc5f5",
+      "End": "56cd0a34e2d64a7aa008eb132b80d489",
+      "Id": "a3737fa11ea84dee850be8c2c22a4130",
+      "IsCollapsed": "False"
+    },
+    {
+      "Start": "938a483bb59b4b1f84c475c91a387391",
+      "End": "aea544546b0d4214bf952bbf5e1e7f9d",
+      "Id": "81b168f0f0ad4363814f850204377963",
+      "IsCollapsed": "False"
+    },
+    {
+      "Start": "1c99a5f61c58491687db64785d9a7bb0",
+      "End": "25b2148ba9234dbe868b3362d4a1f154",
+      "Id": "7f37022ef45d4ee68b796d8ab622da89",
+      "IsCollapsed": "False"
+    },
+    {
+      "Start": "2b4eb194b8e841e3ae22b8e5e09c867e",
+      "End": "6899f417b76f4f1c840a38bf37f1b05b",
+      "Id": "2215bd32ddc14e1584db2e5b31a0b544",
+      "IsCollapsed": "False"
+    },
+    {
+      "Start": "657c548c2d464ae6b2a81b7503a8f6b1",
+      "End": "eed60f1703894f5888d96612b838b84b",
+      "Id": "cb56de7422c44aa9a87766a76fc12c9b",
+      "IsCollapsed": "False"
+    },
+    {
+      "Start": "c4714a09426f486eafd40dc6fccd1fbe",
+      "End": "d84ed51faddb4c4ca3949ff7da42d688",
+      "Id": "3939bcacbebe4f0dbc512da5bb28857b",
+      "IsCollapsed": "False"
+    },
+    {
+      "Start": "3f9667f27c18428293ece7e8ec3ebbd7",
+      "End": "5a621a0ee1144537a4b5af67dcc304e5",
+      "Id": "e80d66cb4e0744f586ec38f8932f1b06",
+      "IsCollapsed": "False"
+    },
+    {
+      "Start": "0d0f192b842d4882a143013843f09e49",
+      "End": "56060a76b7fb44c0b3ef7ac47992426e",
+      "Id": "1e30e1b1e7094c6292c956fb5ddc6e08",
+      "IsCollapsed": "False"
+    },
+    {
+      "Start": "36b7d98ef02545e3adcc475f94310b47",
+      "End": "3be6247f30d94da6822f98ec408e31c3",
+      "Id": "3894f398a4ad46d9b148183e844f95e8",
+      "IsCollapsed": "False"
+    },
+    {
+      "Start": "ad493a240b1f4acaab18cd51e3acfb91",
+      "End": "482bc097224a44c2b3f627b27b4bc5cc",
+      "Id": "8c4f2b34a1e34b9fb63a8147098afcbc",
+      "IsCollapsed": "False"
+    },
+    {
+      "Start": "913872651b5b4017bbf02848d8d68cce",
+      "End": "82f03818ce5a4bc68abd77a5e7ed1536",
+      "Id": "76e65319172a475d9c7eb7db2efd8fd7",
+      "IsCollapsed": "False"
+    },
+    {
+      "Start": "d60fec84a20b43b7833de92d93ad3c6f",
+      "End": "9ba876247f04402a842f47cd0b17e0e1",
+      "Id": "2ebd7cac026e4e469a07c8b29c1bdd77",
+      "IsCollapsed": "False"
+    },
+    {
+      "Start": "4541212b91ce4cc8b881b0602449dceb",
+      "End": "bdf4c31d59734643861d4bdba817ac04",
+      "Id": "ac70f723f51144449c3e33b778d7a7ad",
+      "IsCollapsed": "False"
+    },
+    {
+      "Start": "29b35f0df2d2488cb6b5f0e8dc847b0f",
+      "End": "273dd24359ad4933b159839efc70e393",
+      "Id": "2ce58facfaf247f292e8caeae7bb130d",
+      "IsCollapsed": "False"
+    },
+    {
+      "Start": "bb2e1ec81b5045a68ef203521fb7ea76",
+      "End": "328b21a00e774365a895583993946aee",
+      "Id": "c1af3d0f6fd44c74a242417443714c71",
+      "IsCollapsed": "False"
+    },
+    {
+      "Start": "b6fc5b2b08474d169e73cf1b2c835f50",
+      "End": "fc9d0d32742a4b809a2093716f66c81e",
+      "Id": "02e5b2a08ff04f09b4d65fb4e8c05799",
+      "IsCollapsed": "False"
+    },
+    {
+      "Start": "a4ce3b78ecf54bae99c4a10e2f2f5a5d",
+      "End": "0aec9af49c0343e1b3520bd094ee1e68",
+      "Id": "327d0b2b9aac4f9db932e42adc127054",
+      "IsCollapsed": "False"
+    },
+    {
+      "Start": "f461c78bff8a4de9891eedaae02adf4e",
+      "End": "5d37ffe080d04583b9ea7f16f30cc02d",
+      "Id": "daa338b1920a49aba3c016d923033fa0",
+      "IsCollapsed": "False"
+    },
+    {
+      "Start": "7b34d5daea9d4e4781432a40b7fdfc23",
+      "End": "9bd1883d152643d49d25bae92e707483",
+      "Id": "0d77483d44884c6ea5c8710981490d1a",
+      "IsCollapsed": "False"
+    },
+    {
+      "Start": "121ab51374bf4b368654b7919c0e367f",
+      "End": "3286814f473343c08586f7c7be6cd52c",
+      "Id": "7304e935d91d452a89b39dbfdcdcb8b2",
+      "IsCollapsed": "False"
+    },
+    {
+      "Start": "7c8656437842494b8bbf04b3bb9e7b6b",
+      "End": "27564d2f966545b78d491378c8eb819b",
+      "Id": "f7ec4fd2341b484dbeb664feabd5af31",
+      "IsCollapsed": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "RevitNodes.dll",
+      "ReferenceType": "ZeroTouch",
+      "Nodes": [
+        "8ebb0c7a9f6f43cbb28f63d334707964"
+      ]
+    },
+    {
+      "Name": "DSCoreNodes.dll",
+      "ReferenceType": "ZeroTouch",
+      "Nodes": [
+        "3a61ca8be22e487a9bea8ae8dc8425ec",
+        "28baa9444cb044c48122528066aa4412"
+      ]
+    }
+  ],
+  "Thumbnail": "/9j/4AAQSkZJRgABAQEBQAFAAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCAPoA+gDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9U6KKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK8T/aQ/aEi+EOmR6bpYjufFF7HviSQZS2j5HmuO5yCFXvgk8DBmUlBczInNQjzSPT/Fnjnw/4FsRd6/q9rpUB+6biQBn9lXqx9gDXj+s/tr/DzTZWS1XVtWAOBJa2gVT7/vGU/pXw34g8R6p4s1abU9Yv59Rv5jl57hyzH2HoB2A4FZtebLFyfwo8qeMk37qsfccH7dXgp5MS6Lr0Sf3lihb9PNFdz4U/ai+HHiyVIYtfTTbluBFqcZt//Hz8n/j1fnHRULFVFuTHGVFvqfrhFMk8aSROskbgMrqcgg9CDT6/N74N/tB+I/hHqEMcU8mpaAW/f6VO5KYzyYyfuN9OD3Br9CPCHizTfHPhuw1zSJ/tFheR7426EdirDswIII9RXoUqyqrTc9GjXjWWm5s0UUVudIUUUUAFFFFABRRRQAUUUUAFFFUdd1iHw/oeoapcLI9vY28lzIsQBcqiliACQM4HcigC9RXzp/w3T4D/AOgR4j/8Brf/AOP13nwl/aE8O/GXU7+x0Wy1S1ls4RNI1/FGilS2MDZI3OayVWEnZMxjWpydkz0+iiitTYKKK4v4r/FfSPg94dt9Z1m3vbm1nultFSxRHcOyO4JDOoxhD39KTairsTkoq7O0or50/wCG6fAf/QI8R/8AgNb/APx+vQPhH8ffD3xnutSt9Es9TtXsESSU6hFGgIYkDbskb+6euKzjVhJ2TMo1qcnZM9LooorU2CiiigAooooAKKKKACiiigAooooAKKKKACiiigAoornPGnxG8NfDyzS58RazbaXHJny1lYmSTHXaigs2PYGk2lqxNpK7OjorwTUv21fhzYyMsB1bUQP47azAB/7+MprMP7dXgbPGjeISP+uEH/x6svbU/wCYx9vS/mPo6ivnJP26fArNhtI8QqPX7PAf/a1X7f8AbY+HczAPHrFv7yWi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aa54nklFFFcB5wUUUUAFFFafhfRX8S+JtJ0iMlZNQu4bVSOxdwoP60x76H0/+x/8BY73yfHuvW++JHP9k20g4ZgcGcj2IwvuCeymvsGqul6bbaLptpp9nEsFpaxLBDEvREUAKPwAFWq92nTVOPKj6KlTVKPKgooorU1CiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACvBf2wfhldeO/h7BqmnQtcajoTvceUoyzwMAJQo9RtRvop7171RUTipxcWROCqRcX1PyMor7b+NX7HVj4su7jWvB00OkalKS82nygi2mY8koR/qyfTBU/7NfKPi/4S+MPAczprfh6+s40OPtHlF4D9JFyp/OvGqUZ03qjwalGdN6o5KiinwwyXEqxRRtLIxwqICST6ACsDAZXq37Nfwvl+JnxLsUlhL6PprreXzkfKVU5WP6uwAx6bj2qX4c/sw+OfiDdQs+mSaDpbEF77U0Mfy+qRn5nOOnGPcV91fC/4Y6N8J/C8WjaPGSM+ZcXUmPMuJMYLsf5DoBXZRoOTvJaHdh8PKclKS0Ouooor1z2gooooAKKKKACiiigAooooAKKKKACiiigAr4H/bW/5LR/3DYP5vX3xVK60XT7+XzbmwtriXGN8sKscemSKxq0/aR5bmFan7WPLex+TNFfrB/wjOj/APQJsf8AwGT/AAo/4RnR/wDoE2P/AIDJ/hXH9Tf8xw/UX/Mfk/XZfBn/AJK94J/7DVn/AOjkr9Lv+EZ0f/oE2P8A4DJ/hT4vDulQSJJHplnHIhDK626AqR0IOOtNYRp35hxwbTT5jQooor0T1AooooAKKKKACiiigAooooAKKKKACiiigAr4O/betfs/xitZMY8/SYZPriSVf/Za+8az9Q8P6Xq0yy32m2d5Kq7Q9xAkjAZzjJHTk/nWNWn7SPKYVqftY8tz8nKK/Vr/AIQzw/8A9ALTf/AOP/Cj/hDPD/8A0AtN/wDAOP8Awrj+pv8AmOH6k/5j8paK/Vr/AIQzw/8A9ALTf/AOP/Cj/hDPD/8A0AtN/wDAOP8Awo+pv+YPqT/mPylr0j9nLTf7U+OHg+HG7be+f/37VpP/AGSv0S/4Qzw//wBALTf/AADj/wAKms/DOj6fcJcWuk2NtOmdssNsiMuRg4IGehNOOFcWncqODcZJ8xp0UUV6J6YUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQBlXfhXRL+Qvc6PYXDk53TWqMf1FWbHRtP0vP2KxtrT/rhCqfyFXKKVkKyCiiimMKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACvB/2i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JVhHcePZkEum6TMAyaMpHDuOhuCP+/fQfNkj9CaKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACvgP8A4LT/APJqvhr/ALHG0/8ASK9r78r4D/4LT/8AJqvhr/scbT/0ivaAPxTooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigArsPhL8JfFPxw8eaZ4P8HaXJqut6g+1I14SJB96WRuiIo5LHp9cCnfCH4Q+Kvjn4+0zwd4O0yTVNav3wqrxHCg+9LK3RI1HJY/qSAf3y/Y5/Y38LfsjeA/sGniPVfFl+itrGvvHh7hxz5cfdIVPRe/U5PQAZ+xr+xp4X/ZF8BiyshHq3i/UEU6zr7Jh52HPlRZ5SFT0XqT8x56fQ9FFABRRVPWNYsfD2k3mqapeQafptnC1xc3d1II4oY1BLOzHgAAEkmgA1jWLHw9pN5qmqXkGn6bZwtcXN3dSCOKGNQSzsx4AABJJr8Q/wDgoV/wUKv/ANpDVrjwT4JuJ9P+GVnN88nMcutSKeJZB1EQIykZ68M3O1UP+ChX/BQq/wD2kNWuPBPgm4n0/wCGVnN88nMcutSKeJZB1EQIykZ68M3O1U+H6ACiiigAqW1tZr66htraGS4uJnWOKGJSzuxOAqgckknAAotLSfULqG1tYZLm5mdY4oYULPI5OAqgckkkAAV+zn/BOj/gnND8Fbax+JPxKsY7jx9Mgl07SZgHTRlI4ZuxuCO/8HQfNkgAT/gnP/wTnh+C9rYfEr4lWEdx4+mQS6bpMwDJoykcOw6G4IP/AGz6D5skfoRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFfAf/Baf/k1Xw1/2ONp/6RXtfflfAf8AwWn/AOTVfDX/AGONp/6RXtAH4p0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABXafB74PeKvjv4/0zwd4N0x9T1m+bgdI4IxjdLK/8Eag5LH2AySAXfBv4N+K/j18QNN8G+DdMbUtYvW91it4wRvmlfHyRqDy30AySAf31/Y//Y/8Kfsj+AF0vSlTU/E18qvrGvyR4lu5B/Av9yJSTtT8TkkmgBn7Hf7HfhX9kfwCNN00Jqnim/RW1nX3jxJcuOdid0iU52r+JyTX0BRRQAUUVT1jWLHw9pN5qmqXkGn6bZwtcXN3dSCOKGNQSzsx4AABJJoANY1ix8PaTeapql5Bp+m2cLXFzd3UgjihjUEs7MeAAASSa/EP/goV/wAFCr79pHVrjwT4JuJ9P+GVnN88nMcutSKeJZB1EQIykZ68M3O1UP8AgoV/wUKv/wBpDVrjwT4JuJ9P+GVnN88nMcutSKeJZB1EQIykZ68M3O1U+H6ACiiigAooooAsabqV3o2o2t/YXU1lfWsqz29zbyGOSKRSGV1YcqwIBBHIIr9sP+Cd/wDwUQtP2gtPtPAPj67hsviTaxbba7bEcetxqOWUdFnAGWQcMAWX+JV/EerGm6ld6NqFrf2F1NZX1rKs8FzbyGOSKRSCrqw5VgQCCOQRQB/VBRXwf/wTv/4KIWn7QWn2ngHx9dw2XxJtYtttdtiOPW41HLKOizgDLIOGALL/ABKv3hQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFfAf/Baf/k1Xw1/2ONp/wCkV7X35XwH/wAFp/8Ak1Xw1/2ONp/6RXtAH4p0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFdx8F/gv4s+P3xB07wb4N01tR1e8bJY5WG2iBG+aV8fJGueT7gAEkAv+CfwT8W/tBfELTvBvg3TW1DVrw7mdsrDbRAjfNM+PkjXIyfcAAkgH99/2Rv2RfCf7JPw9XRtFRdQ8QXirJrGvSxhZr2UDoP7kS5O1AeMknLEkgEf7If7IXhT9kn4frpGkKupeI71VfWNekjAlvJAPur/ciUk7Uz7nJJNe9UUUAFFFU9Y1ix8PaTeapql5Bp+m2cLXFzd3UgjihjUEs7MeAAASSaADWNYsfD2k3mqapeQafptnC1xc3d1II4oY1BLOzHgAAEkmvxD/AOChX/BQq/8A2kNWuPBPgm4n0/4ZWc3zycxy61Ip4lkHURAjKRnrwzc7VQ/4KFf8FCr/APaQ1a48E+CbifT/AIZWc3zycxy61Ip4lkHURAjKRnrwzc7VT4foAKKKKACiiigAooooAKKKKALGm6ld6NqFrf2F1NZX1rKs8FzbyGOSKRSCrqw5VgQCCOQRX7Yf8E7/APgohaftBafaeAfH13DZfEm1i22122I49bjUcso6LOAMsg4YAsv8Sr+I9WNN1K70bULW/sLqayvrWVZ4Lm3kMckUikFXVhyrAgEEcgigD+qCivg//gnf/wAFELT9oLT7TwD4+u4bL4k2sW22u2xHHrcajllHRZwBlkHDAFl/iVfvCgAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAr4I/4LQWslx+yjoToMrD4utJH9h9lvF/mwr73r5z/AOChHwouPjD+yP4+0exhM+qWVqur2aKMs0ls4lZVHdmjWRQPVhQB/PHRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABXe/BH4IeLf2hPiFp/g3wZpzX+qXR3SSNlYbWEEb5pnx8iLkZPUkgAEkAu+BvwN8XftEfETT/Bvg3TmvtTujulmfKwWkII3zTPj5UXI56kkAAkgH9+v2Tf2TfCX7Jvw8j0HQYxfazdBZNX12aMLPfzAfjsjXJC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s4WuLm7uZBHFDGoJZ2Y8AAAkk1+If/BQr/goVfftJatceCfBNxPp/wAMbOb5pMGOXWZFPEsg6iIEZSM+zNztCH/BQr/goVf/ALSOrXHgnwTcTaf8MbOb5pMGOXWZFPEsg6iIEZSM9eGbnaE+H6ACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACv2l/4Is+G59L/Zr8T6vMhRdU8Sy+Tkfejit4F3D/AIGXH/ATX4z6Hot/4k1qw0nS7SW+1O/njtbW1hXc80rsFRFHcliAPrX9JP7L/wAGIf2ffgL4N8BxlHuNKsh9slj+7JdSEyTsD3Bkd8e2KAPUqKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACua+I/w48OfFrwXqnhPxZpcOsaDqURiuLWccHuGU9VdTgqwwQQCDkV0tFAH8+H7bn7EfiP9kbxpuXztY8BalKw0nXNvI6n7PPgYWZR9A4G5ejKvzNX9QfxG+HPhz4teC9U8J+LNLh1jQdSiMVxazjg9wykcqynBVhgggEHIr8Ff23P2I/Ef7I3jTcvnaz4C1KVv7J1zZyOp+zz4GFlUfQOBuXoyqAfM1emfs9/s9+L/ANpb4jWXhDwfZGa4kxJd30oIt7GDOGmmYdFHYdWOAASad+zv+zv4w/aa+I1n4R8IWXmzPiS8v5QRb2EGcNNKw6Adh1Y4ABJr9/f2Y/2Y/CH7K/w5t/C3ha3824k2y6lq8yAXGoTgYMjnso5CoOFHqSSQBn7MH7MHhD9lX4cweGPC8HnXcu2XU9YmQC41CcDG9/RRkhUBwoPckk+wUUUAFFFU9Y1ix8PaTeapql5Bp+m2cLXFzd3UgjihjUEs7MeAAASSaADWNYsfD2k3mqapeQafptnC1xc3d1II4oY1BLOzHgAAEkmvxD/4KFf8FCr/APaR1a48E+CrifT/AIY2U3zvzHLrUiniWQdViBGUjPszc7Qh/wAFCv8AgoVf/tIatceCfBNxPp/wys5vnk5jl1qRTxLIOoiBGUjPXhm52qnw/QAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUAEnAGTQAScAZNfrX/wAE3f8Agm6PDo0v4sfFjS86t8tzoXhu8T/j07pc3CH/AJadCkZ+5wzfNgIAaX/BMP8A4J93Xw9ex+L/AMSNPMHiKSLfoOh3KfPYI4/4+ZlPSVlJCofuAkn5iAn6V0UUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAVzXxG+HPhz4teC9U8J+LNLh1jQdSiMVxazjg9wykcqynBVhgggEHIrpaKAPKv2c/2avBH7L3gRfDHguxeOOR/OvNRuyr3d7L2eVwBnA4CgAAdBySfVaKKACiiqesaxY+HtJvNU1S8g0/TbOFri5u7qQRxQxqCWdmPAAAJJNABrGsWPh7SbzVNUvINP02zha4ubu6kEcUMaglnZjwAACSTX4h/wDBQr/goVf/ALSGrXHgnwTcT6f8MbOb55MGOXWpFPEsg6iIEZSM9eGbnaEP+ChX/BQq/wD2kNWuPBPgm4n0/wCGVnN88nMcutSKeJZB1EQIykZ68M3O1U+H6ACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACgAk4AyaACTgDJr9a/+Cbv/BN0eHRpfxY+LGl51b5bnQvDd4n/AB6d0ubhD/y06FIz9zhm+bAQAP8Agm7/AME3R4dGl/Fj4saXnVvludC8N3if8endLm4Q/wDLToUjP3OGb5sBP09oooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo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igAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiqesaxY+HtJvNU1S8g0/TbOFri5u7qQRxQxqCWdmPAAAJJNABrGsWPh7SbzVNUvINP02zha4ubu6kEcUMaglnZjwAACSTX4h/8FCv+ChV/wDtIatceCfBNxPp/wAMrOb55OY5dakU8SyDqIgRlIz14Zudqof8FCv+ChV/+0hq1x4J8E3E+n/DKzm+eTmOXWpFPEsg6iIEZSM9eGbnaqfD9ABRRRQAVJa2s19cw21tDJcXEziOOGJSzuxOAqgckk8YFFtbTXlxFb28TzzyuI44o1LM7E4CgDkkntX7N/8ABOb/AIJzw/Bm1sPiX8SrCO48ezIJdN0mYBk0ZSOHcdDcEH/tn0HzZIAD/gnN/wAE54fgza2HxK+JVhHcePZkEum6TMAyaMpHDsOhuCP+/fQfNkj9CaKKACiiigArlvid8MfDXxi8D6p4R8XaXDrGhalF5c9vKOR3V0bqrqcFWHIIBFdTRQB/PR+2r+xV4l/ZF8ceXJ52seB9Slb+x9e2cN38ibHCzKPwYDcvcL83V/T/APE74Y+GvjF4H1Twj4u0uHWNC1KLy57eUcjuro3VXU4KsOQQCK/BH9tX9irxL+yL448uTztY8D6lK39j69s4bv5E2OFmUfgwG5e4UA+bqKKKACiiigAooooAKACTgDJoAJOAMmv1r/4Ju/8ABN0eHRpfxY+LGl51b5bnQvDd4n/Hp3S5uEP/AC06FIz9zhm+bAQAP+Cbv/BN0eHRpfxY+LGl51b5bnQvDd4n/Hp3S5uEP/LToUjP3OGb5sBP09oooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigCnrGsWPh7SbzVNUvINP02zha4ubu6kEcUMaglnZjwAACSTX4h/8ABQr/AIKFX/7SGrXHgnwTcT6f8MrOb55OY5dakU8SyDqIgRlIz14Zudqp+nf7eX7OXiT9pv4EXvhjwt4juNF1WCUXsdh5gS11UoCRbznGQM4KnO0MFLA4BX+ffxP4Y1bwX4h1DQtd0+40nWNPma3urK6QpJDIpwVYGgDMooooAKktrea8uIre3ieeeVxHHFGpZnYnAUAckk9qLa2mvLiK3t4nnnlcRxxRqWZ2JwFAHJJPav2Y/wCCcv8AwTlh+DtvYfEz4mWCT+O5VEumaPOoZdGUjiRx0NwR/wB+/wDe+6AH/BOX/gnLF8Hbew+JnxMsEn8dyoJdM0edQy6MpHEjjobgj/v3/vfd/QyiigAooooAKKKKACiiigArlvid8MfDXxi8D6p4R8XaXDrGhalF5c9vKOR3V0bqrqcFWHIIBFdTRQB/PR+2r+xV4l/ZF8ceXJ52seB9Slb+x9e2cN38ibHCzKPwYDcvcL83V/UB8Svhn4a+L/grU/Cfi7SYNZ0HUY/LntZx+KurDlXU4IYYIIBFfjH+1Z/wSr+InwZvr3Wfh/bXXxC8F7i6LaR79TtE67ZYVH7wD+/GDnBJVKAPhuipbq1nsbmW3uYZLe4iYpJFKpV0YcEEHkGoqACgAk4Aya674a/CHxp8Y9eTRvBPhjUvEuosQDHYW5dY8/xSP92Nf9pyB71+tX7Dv/BLGw+D2pWHjr4rNZ694vtys1hocOJbPTZByJHY8TTL2x8ikZG47WAByX/BN3/gm6PDo0v4sfFjS86t8tzoXhu8T/j07pc3CH/lp0KRn7nDN82An6e0UUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFfHX7ff7Amk/tTeHpPEfhyO30n4nafDi2u2wkepxqOLec+vZJD93ofl6fYtFAH8tXijwvq3grxFqOg69p1xpOsafM1vd2V0hSSGRTgqwNULe3lvLiKCCJ555WCRxRqWZ2JwAAOSSe1fvB+33+wJpP7U/h2TxH4cjt9J+J2nw4trtsJHqcaji3nPr2SQ/d6H5ennH/AATr/wCCcEfwYWz+JHxPsIp/HjDzNM0eQrJHo47SPjIa4PbGQg6fNyoAz/gnL/wTmi+D1vYfEz4mWCTeOpUEul6POoZdHUjiRx3uCP8Av3/vfd/Q6iigAooooAKKKKACiiigAooooAKKKKACiiigDivHXwT+HvxPbf4v8D+HvE0uMCbVdLhuJF+jupYfga4jT/2JvgJpd0LiH4ReEWkByBPpcUy/98uCP0r2yigDO0Hw7pXhbTY9P0XTLPSLCP7lrYW6QRL9EUAD8q0aKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP/9k=",
+  "GraphDocumentationURL": "https://dynamobim.org",
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.13",
+      "Data": {}
+    }
+  ],
+  "Author": "Autodesk",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.13.0.2751",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Id": "ee2acf6934dd45688cc2172f046ba977",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 82.983758323008,
+        "Y": -1545.22984935273
+      },
+      {
+        "Name": "Element.SetParameterByName",
+        "ShowGeometry": true,
+        "Id": "8ebb0c7a9f6f43cbb28f63d334707964",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2262.71236046202,
+        "Y": -140.446752699184
+      },
+      {
+        "Name": "String",
+        "ShowGeometry": true,
+        "Id": "b70b2ad920854e4fb4236b11920c4aab",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2011.44416663601,
+        "Y": -107.564160093292
+      },
+      {
+        "Name": "String",
+        "ShowGeometry": true,
+        "Id": "88598273d3bb4971b898756122a833c4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2011.44416663601,
+        "Y": 41.4476481134336
+      },
+      {
+        "Name": "All Elements of Category",
+        "ShowGeometry": true,
+        "Id": "fafbc77f9d6d4bc58cc9fc7599f3a9c2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1356.4624798334,
+        "Y": -243.411019014743
+      },
+      {
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Id": "07fad3e0055e476aacfe9287f4f45e67",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 82.983758323008,
+        "Y": -224.94628302922797
+      },
+      {
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Id": "29970442ed3b4d4d847c79481631f477",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 82.983758323008,
+        "Y": -811.738979173005
+      },
+      {
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Id": "0b9b014ede184de8801bf4a5eace9a13",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 82.983758323008,
+        "Y": -1398.53167531678
+      },
+      {
+        "Name": "List Create",
+        "ShowGeometry": true,
+        "Id": "7afe976c833e48c9b6e59bcf675b65f0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1151.54732657699,
+        "Y": -243.411019014743
+      },
+      {
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Id": "186ba189defe4028bbc7f8bfb92a090c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 82.983758323008,
+        "Y": -1251.83350128084
+      },
+      {
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Id": "396b87e64e3048b48173367885b0f982",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 82.983758323008,
+        "Y": -1105.13532724489
+      },
+      {
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Id": "7bf6d9277ea9470489d2bac3fb1f057e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 82.983758323008,
+        "Y": -958.437153208949
+      },
+      {
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Id": "f87af5227eea46d786ec3d79ce0ce15b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 82.983758323008,
+        "Y": -371.644457065172
+      },
+      {
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Id": "32e80a594cd045a6aa1a9cb7f8cc9f6d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 78.911005109488315,
+        "Y": 1388.7336313661597
+      },
+      {
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Id": "c9f97334801c42c7b5a53f3832e260e0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 82.983758323008,
+        "Y": -518.34263110111692
+      },
+      {
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Id": "dc84b7bd66cf44e29246596e5d8bd29d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 82.983758323008,
+        "Y": -665.040805137061
+      },
+      {
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Id": "39dd0ddef2fe478eae76bbf6a26aa5e6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 82.983758323008,
+        "Y": -78.24810899328395
+      },
+      {
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Id": "2cf578f6ccc1472c96b193eccaa20906",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 82.983758323008,
+        "Y": 68.4500650426603
+      },
+      {
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Id": "4345ec46b55f414287e5f24ce3449557",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 82.983758323008,
+        "Y": 215.148239078605
+      },
+      {
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Id": "542b2aeab2b247f7a17b32286d81888f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 82.983758323008,
+        "Y": 361.846413114549
+      },
+      {
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Id": "3b053bfb08204aa998a00df979cb7613",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 82.983758323008,
+        "Y": 508.54458715049282
+      },
+      {
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Id": "79f72cd3f34e43cda0ca9808f43e04a8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 82.983758323008,
+        "Y": 655.24276118643706
+      },
+      {
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Id": "fac6708815f34323b0a1dff64e708b50",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 82.983758323008,
+        "Y": 801.94093522238177
+      },
+      {
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Id": "f4cf6d5191a74588b95e9f252c32dc47",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 82.983758323008,
+        "Y": 948.639109258326
+      },
+      {
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Id": "07cd5e15154245d9b29def0fcc887bf0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 82.983758323008,
+        "Y": 1095.3372832942703
+      },
+      {
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Id": "9312df898ec3418c9516b14bf4c1dd70",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 81.1307609870172,
+        "Y": 1242.03545733021
+      },
+      {
+        "Name": "List.Flatten",
+        "ShowGeometry": true,
+        "Id": "3a61ca8be22e487a9bea8ae8dc8425ec",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1679.74371098931,
+        "Y": -243.411019014743
+      },
+      {
+        "Name": "List.Count",
+        "ShowGeometry": true,
+        "Id": "28baa9444cb044c48122528066aa4412",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2638.00176101333,
+        "Y": -140.446752699184
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "8b1ed78a1ed34dbeaa42d96f341cd722",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2845.20176101333,
+        "Y": -140.446752699184
+      },
+      {
+        "Name": "Result",
+        "ShowGeometry": true,
+        "Id": "55efa24da507497baad4efe7581a25c8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": true,
+        "Excluded": false,
+        "X": 3470.00176101333,
+        "Y": -140.446752699184
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "905ad6de5ff948cb9885115c2e36e98f",
+        "Title": "Delete Mark Values from MEP Content",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "058bc6c2c34d496c9334a4b57bbb4c3c"
+        ],
+        "HasNestedGroups": false,
+        "Left": -315.87115453972433,
+        "Top": -1525.0730880134586,
+        "Width": 269.6,
+        "Height": 187.40000000000009,
+        "FontSize": 30.0,
+        "InitialTop": -1387.0730880134586,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 128.0,
+        "Background": "#FFFFFFFF"
+      },
+      {
+        "Id": "459bc42f302c45e38578b72afcedb95f",
+        "Title": "Selection",
+        "DescriptionText": "MEP Category Selection",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "ee2acf6934dd45688cc2172f046ba977",
+          "07fad3e0055e476aacfe9287f4f45e67",
+          "29970442ed3b4d4d847c79481631f477",
+          "0b9b014ede184de8801bf4a5eace9a13",
+          "186ba189defe4028bbc7f8bfb92a090c",
+          "396b87e64e3048b48173367885b0f982",
+          "7bf6d9277ea9470489d2bac3fb1f057e",
+          "f87af5227eea46d786ec3d79ce0ce15b",
+          "32e80a594cd045a6aa1a9cb7f8cc9f6d",
+          "c9f97334801c42c7b5a53f3832e260e0",
+          "dc84b7bd66cf44e29246596e5d8bd29d",
+          "39dd0ddef2fe478eae76bbf6a26aa5e6",
+          "2cf578f6ccc1472c96b193eccaa20906",
+          "4345ec46b55f414287e5f24ce3449557",
+          "542b2aeab2b247f7a17b32286d81888f",
+          "3b053bfb08204aa998a00df979cb7613",
+          "79f72cd3f34e43cda0ca9808f43e04a8",
+          "fac6708815f34323b0a1dff64e708b50",
+          "f4cf6d5191a74588b95e9f252c32dc47",
+          "07cd5e15154245d9b29def0fcc887bf0",
+          "9312df898ec3418c9516b14bf4c1dd70"
+        ],
+        "HasNestedGroups": false,
+        "Left": 68.911005109488315,
+        "Top": -1617.6298493527302,
+        "Width": 294.4727532135197,
+        "Height": 3142.9634807188895,
+        "FontSize": 36.0,
+        "InitialTop": -1545.22984935273,
+        "InitialHeight": 3100.56348071889,
+        "TextblockHeight": 62.4,
+        "Background": "#FFE8F7AD"
+      },
+      {
+        "Id": "1a8b40f154de4c5aaf59135805c7968e",
+        "Title": "Parameter Modification",
+        "DescriptionText": "Clear the mark parameter",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "8ebb0c7a9f6f43cbb28f63d334707964",
+          "b70b2ad920854e4fb4236b11920c4aab",
+          "88598273d3bb4971b898756122a833c4"
+        ],
+        "HasNestedGroups": false,
+        "Left": 2001.44416663601,
+        "Top": -212.846752699184,
+        "Width": 574.46819382600984,
+        "Height": 390.89440081261762,
+        "FontSize": 36.0,
+        "InitialTop": -140.446752699184,
+        "InitialHeight": 348.494400812617,
+        "TextblockHeight": 62.4,
+        "Background": "#FFFFC999"
+      },
+      {
+        "Id": "f3c16676f861484d82efbb97209f241c",
+        "Title": "Collection",
+        "DescriptionText": "Get All Elements of MEP Categories",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "fafbc77f9d6d4bc58cc9fc7599f3a9c2",
+          "7afe976c833e48c9b6e59bcf675b65f0",
+          "3a61ca8be22e487a9bea8ae8dc8425ec"
+        ],
+        "HasNestedGroups": false,
+        "Left": 1141.54732657699,
+        "Top": -315.811019014743,
+        "Width": 763.39638441232023,
+        "Height": 908.19999999999993,
+        "FontSize": 36.0,
+        "InitialTop": -243.411019014743,
+        "InitialHeight": 865.8,
+        "TextblockHeight": 62.4,
+        "Background": "#FFE8F7AD"
+      },
+      {
+        "Id": "727fb3bca33f406f9132828d1e0832c0",
+        "Title": "Build Output",
+        "DescriptionText": "Give user feedback based on the operation",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "28baa9444cb044c48122528066aa4412",
+          "8b1ed78a1ed34dbeaa42d96f341cd722",
+          "55efa24da507497baad4efe7581a25c8"
+        ],
+        "HasNestedGroups": false,
+        "Left": 2628.00176101333,
+        "Top": -212.846752699184,
+        "Width": 1126.4,
+        "Height": 348.20000000000005,
+        "FontSize": 36.0,
+        "InitialTop": -140.446752699184,
+        "InitialHeight": 305.8,
+        "TextblockHeight": 62.4,
+        "Background": "#FFFFC999"
+      },
+      {
+        "Id": "058bc6c2c34d496c9334a4b57bbb4c3c",
+        "Title": "See graph properties for more information",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": -305.87115453972433,
+        "Top": -1387.0730880134586,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 78.714861634354392,
+    "Y": 349.8636358465634,
+    "Zoom": 0.62180536761066807
+  }
+}
