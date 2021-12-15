@@ -20,8 +20,8 @@
     {
       "Id": "96c4208aed0e4c8ea8389cec1caef934",
       "Name": "Calculation Results",
-      "Type": "unknown",
-      "InitialValue": "",
+      "Type": "string",
+      "InitialValue": "Selected Curves: 2\nTotal Length: 39000.000 Millimeters",
       "Description": "Visualize the node's output"
     }
   ],
@@ -276,7 +276,7 @@
     {
       "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
       "NodeType": "PythonScriptNode",
-      "Code": "# Import DocumentManager and TransactionManager\r\nimport clr\r\nclr.AddReference(\"RevitServices\")\r\nimport RevitServices\r\nfrom RevitServices.Persistence import DocumentManager\r\ndoc = DocumentManager.Instance.CurrentDBDocument\r\n\r\n# Import RevitAPI\r\nclr.AddReference(\"RevitAPI\")\r\nimport Autodesk\r\nfrom Autodesk.Revit.DB import *\r\n\r\n# Add reference to IronPython Lib folder\r\nimport sys\r\npyt_path = r'C:\\Program Files (x86)\\IronPython 2.7\\Lib'\r\nsys.path.append(pyt_path)\r\n\r\n# Set up inputs\r\nvalue = IN[0]\r\n\r\n# Execute definition\r\nprojectUnits = Document.GetUnits(doc).GetFormatOptions(SpecTypeId.Length).GetUnitTypeId()\r\ndisplayUnit = LabelUtils.GetLabelForUnit(projectUnits)\r\n\r\n# Assign your output to the OUT variable\r\nOUT = displayUnit",
+      "Code": "# Import DocumentManager and TransactionManager\r\nimport clr\r\nclr.AddReference(\"RevitServices\")\r\nimport RevitServices\r\nfrom RevitServices.Persistence import DocumentManager\r\ndoc = DocumentManager.Instance.CurrentDBDocument\r\n\r\n# Import RevitAPI\r\nclr.AddReference(\"RevitAPI\")\r\nimport Autodesk\r\nfrom Autodesk.Revit.DB import *\r\n\r\n\r\n# Set up inputs\r\nvalue = IN[0]\r\n\r\n# Execute definition\r\nprojectUnits = Document.GetUnits(doc).GetFormatOptions(SpecTypeId.Length).GetUnitTypeId()\r\ndisplayUnit = LabelUtils.GetLabelForUnit(projectUnits)\r\n\r\n# Assign your output to the OUT variable\r\nOUT = displayUnit",
       "Engine": "CPython3",
       "VariableInputPorts": true,
       "Id": "c337fa3eb38f4b39a6cb9b91076b69a0",
@@ -590,7 +590,7 @@
     {
       "Start": "6ef94b55c4644ec489f337d6013bdbf2",
       "End": "4a7ca5cc47eb40e19705d97aef6feb9c",
-      "Id": "bd5c3d98f9284b698e29cc3683e79096",
+      "Id": "10f93faa877849b88923495f6572a81d",
       "IsCollapsed": "False"
     },
     {
@@ -723,12 +723,12 @@
     "ConnectorPins": [
       {
         "Left": 4398.1392979709308,
-        "Top": 1956.0777006119049,
+        "Top": 1946.0778006119049,
         "ConnectorGuid": "1671190b-2bb1-4cab-a9d7-b875d8a82dd3"
       },
       {
         "Left": 4389.0897092715722,
-        "Top": 1444.1295399053565,
+        "Top": 1434.1296399053565,
         "ConnectorGuid": "51b7a8a8-14e1-4591-bbc8-c7b366d6e711"
       }
     ],
@@ -1010,7 +1010,7 @@
         "Height": 218.60000000000014,
         "FontSize": 36.0,
         "InitialTop": 1948.418540466608,
-        "InitialHeight": 145.0,
+        "InitialHeight": 144.99999999999977,
         "TextblockHeight": 72.0,
         "Background": "#FFE8F7AD"
       },
@@ -1032,7 +1032,7 @@
         "Height": 290.33691994223,
         "FontSize": 36.0,
         "InitialTop": 1624.63324106546,
-        "InitialHeight": 226.934855914923,
+        "InitialHeight": 226.33691994223,
         "TextblockHeight": 62.4,
         "Background": "#FFE8F7AD"
       },
@@ -1057,7 +1057,7 @@
         "Height": 349.18492692469,
         "FontSize": 36.0,
         "InitialTop": 1624.493876689198,
-        "InitialHeight": 306.78492692468967,
+        "InitialHeight": 283.92692707944093,
         "TextblockHeight": 62.4,
         "Background": "#FFE8F7AD"
       },
@@ -1081,8 +1081,8 @@
         "Background": "#FFC1D676"
       }
     ],
-    "X": -1760.9755857169414,
-    "Y": -721.81181549742939,
-    "Zoom": 0.66057261586076366
+    "X": -1035.2085342982432,
+    "Y": -910.327521008897,
+    "Zoom": 0.87042203334158774
   }
 }

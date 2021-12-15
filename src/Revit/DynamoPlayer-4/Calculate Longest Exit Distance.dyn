@@ -35,8 +35,8 @@
     {
       "Id": "f337df2a9d2f49edac1f616df5a4c5cc",
       "Name": "Calculation Results",
-      "Type": "unknown",
-      "InitialValue": "",
+      "Type": "string",
+      "InitialValue": "Longest Path is: nul Millimeters  Long\nTotal Travel Time: nul seconds @ nul Kilometers per hour",
       "Description": "Visualize the node's output"
     }
   ],
@@ -556,7 +556,7 @@
     {
       "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
       "NodeType": "PythonScriptNode",
-      "Code": "# Import DocumentManager and TransactionManager\r\nimport clr\r\nclr.AddReference(\"RevitServices\")\r\nimport RevitServices\r\nfrom RevitServices.Persistence import DocumentManager\r\ndoc = DocumentManager.Instance.CurrentDBDocument\r\n\r\n# Import RevitAPI\r\nclr.AddReference(\"RevitAPI\")\r\nimport Autodesk\r\nfrom Autodesk.Revit.DB import *\r\n\r\n# Add reference to IronPython Lib folder\r\nimport sys\r\npyt_path = r'C:\\Program Files (x86)\\IronPython 2.7\\Lib'\r\nsys.path.append(pyt_path)\r\n\r\n# Set up inputs\r\nvalue = IN[0]\r\n\r\n# Execute definition\r\nprojectUnits = Document.GetUnits(doc).GetFormatOptions(SpecTypeId.Length).GetUnitTypeId()\r\nprojectDisplayUnits = LabelUtils.GetLabelForUnit(projectUnits)\r\n\r\nspeedUnits = Document.GetUnits(doc).GetFormatOptions(SpecTypeId.Speed).GetUnitTypeId()\r\nspeedDisplayUnits = LabelUtils.GetLabelForUnit(speedUnits)\r\n\r\n\r\n# Assign your output to the OUT variable\r\nOUT = projectDisplayUnits,speedDisplayUnits",
+      "Code": "# Import DocumentManager and TransactionManager\r\nimport clr\r\nclr.AddReference(\"RevitServices\")\r\nimport RevitServices\r\nfrom RevitServices.Persistence import DocumentManager\r\ndoc = DocumentManager.Instance.CurrentDBDocument\r\n\r\n# Import RevitAPI\r\nclr.AddReference(\"RevitAPI\")\r\nimport Autodesk\r\nfrom Autodesk.Revit.DB import *\r\n\r\n# Set up inputs\r\nvalue = IN[0]\r\n\r\n# Execute definition\r\nprojectUnits = Document.GetUnits(doc).GetFormatOptions(SpecTypeId.Length).GetUnitTypeId()\r\nprojectDisplayUnits = LabelUtils.GetLabelForUnit(projectUnits)\r\n\r\nspeedUnits = Document.GetUnits(doc).GetFormatOptions(SpecTypeId.Speed).GetUnitTypeId()\r\nspeedDisplayUnits = LabelUtils.GetLabelForUnit(speedUnits)\r\n\r\n\r\n# Assign your output to the OUT variable\r\nOUT = projectDisplayUnits,speedDisplayUnits",
       "Engine": "CPython3",
       "VariableInputPorts": true,
       "Id": "044a4d2c8aaa420e86832be20347b499",
@@ -1783,8 +1783,8 @@
         "Background": "#FFC1D676"
       }
     ],
-    "X": 1239.3788640495238,
-    "Y": 165.04164583009975,
-    "Zoom": 0.17186051271656666
+    "X": 4034.0782671384409,
+    "Y": -774.514099654765,
+    "Zoom": 0.68930281532560189
   }
 }
