@@ -11,16 +11,7 @@
       }
     }
   },
-  "Inputs": [
-    {
-      "Id": "f161d82d171247289b87b801e8daa0b3",
-      "Name": "Select Sheets",
-      "Type": "dropdownSelection",
-      "Value": "ViewSheet",
-      "Description": "All element subtypes.",
-      "SelectedIndex": 354
-    }
-  ],
+  "Inputs": [],
   "Outputs": [
     {
       "Id": "b3daba6c25ad47aaa610d9694fb3f865",
@@ -198,17 +189,46 @@
       "Description": "Visualize the node's output"
     },
     {
-      "ConcreteType": "DSRevitNodesUI.ElementTypes, DSRevitNodesUI",
-      "SelectedIndex": 354,
-      "SelectedString": "ViewSheet",
-      "NodeType": "ExtensionNode",
-      "Id": "f161d82d171247289b87b801e8daa0b3",
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Category.ByName@string",
+      "Id": "d313a269f89344deaa4f558441188165",
+      "Inputs": [
+        {
+          "Id": "3e563d2be3814bf69643a004e4311ba3",
+          "Name": "name",
+          "Description": "The built in category name.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "bd15367f992a4a8c9f9e43f81bce7ba8",
+          "Name": "Category",
+          "Description": "Category",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Gets a Revit category by the built-in category name.\n\nCategory.ByName (name: string): Category"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.StringInput, CoreNodeModels",
+      "NodeType": "StringInputNode",
+      "InputValue": "Sheets",
+      "Id": "a88c3b00378c4750a683eeb1acbaccd4",
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "f9e400e4f8f5442095ab5a42da4e9c00",
-          "Name": "Types",
-          "Description": "The selected Types",
+          "Id": "539dc7f0f3e1413f8aac2bb3cf796417",
+          "Name": "",
+          "Description": "String",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -216,17 +236,17 @@
         }
       ],
       "Replication": "Disabled",
-      "Description": "All element subtypes."
+      "Description": "Creates a string."
     },
     {
-      "ConcreteType": "DSRevitNodesUI.ElementsOfType, DSRevitNodesUI",
+      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
       "NodeType": "ExtensionNode",
-      "Id": "ef16f021401e4d0a84d8d8ca93875389",
+      "Id": "e92f16cc529b4ce5b67cee4106c4bb44",
       "Inputs": [
         {
-          "Id": "bab235c6b1a54d299a4b3e407090fd3d",
-          "Name": "element type",
-          "Description": "An element type.",
+          "Id": "2f176557653c45bd98605a7f375ea513",
+          "Name": "Category",
+          "Description": "The Category",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -235,9 +255,9 @@
       ],
       "Outputs": [
         {
-          "Id": "e6d5810450e44fb186833469aeecf15d",
-          "Name": "elements",
-          "Description": "All elements in the active document of a given type.",
+          "Id": "218a6bd5c808469f83f6dd1ec8c35119",
+          "Name": "Elements",
+          "Description": "An element class.",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -245,7 +265,7 @@
         }
       ],
       "Replication": "Disabled",
-      "Description": "All elements in the active document of a given type."
+      "Description": "Get all elements of the specified category from the model."
     }
   ],
   "Connectors": [
@@ -280,21 +300,27 @@
       "IsHidden": "False"
     },
     {
-      "Start": "f9e400e4f8f5442095ab5a42da4e9c00",
-      "End": "bab235c6b1a54d299a4b3e407090fd3d",
-      "Id": "7276d18b415a401cb294546f3e58670f",
+      "Start": "bd15367f992a4a8c9f9e43f81bce7ba8",
+      "End": "2f176557653c45bd98605a7f375ea513",
+      "Id": "f51091e2a5344c1081ad6562ac4d911b",
       "IsHidden": "False"
     },
     {
-      "Start": "e6d5810450e44fb186833469aeecf15d",
+      "Start": "539dc7f0f3e1413f8aac2bb3cf796417",
+      "End": "3e563d2be3814bf69643a004e4311ba3",
+      "Id": "07e677e84371491b9592dfd094e70608",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "218a6bd5c808469f83f6dd1ec8c35119",
       "End": "1a2cd8dbd02640dfa2e88f718e94b30a",
-      "Id": "22b818bcdef74291a718036c47b3a16d",
+      "Id": "b084e5891e7b4952a3b0a5384b9580b0",
       "IsHidden": "False"
     },
     {
-      "Start": "e6d5810450e44fb186833469aeecf15d",
+      "Start": "218a6bd5c808469f83f6dd1ec8c35119",
       "End": "def72b05ab204ab68e2ce6a3442192ff",
-      "Id": "67e85c76af5a42c6ab057449ffd0d93e",
+      "Id": "e9029a109f92433890c96ab3f24715ca",
       "IsHidden": "False"
     }
   ],
@@ -307,6 +333,12 @@
       "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
       "Name": "Properties",
       "Version": "2.13",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "2.0",
       "Data": {}
     }
   ],
@@ -323,7 +355,7 @@
       "ScaleFactor": 1.0,
       "HasRunWithoutCrash": true,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "2.13.0.3135",
+      "Version": "2.13.0.3137",
       "RunType": "Manual",
       "RunPeriod": "1000"
     },
@@ -342,7 +374,7 @@
     "ConnectorPins": [
       {
         "Left": 287.0949973230413,
-        "Top": 109.13365391770958,
+        "Top": 89.133853917709587,
         "IsHidden": false,
         "ConnectorGuid": "efd5b7e0-5fa0-4b05-a72a-c352f6d3f8a5"
       }
@@ -400,23 +432,33 @@
       },
       {
         "ShowGeometry": true,
-        "Name": "Select Sheets",
-        "Id": "f161d82d171247289b87b801e8daa0b3",
-        "IsSetAsInput": true,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "X": -551.327536714019,
-        "Y": 37.4265395124974
-      },
-      {
-        "ShowGeometry": true,
-        "Name": "All Elements of Type",
-        "Id": "ef16f021401e4d0a84d8d8ca93875389",
+        "Name": "Category.ByName",
+        "Id": "d313a269f89344deaa4f558441188165",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -316.430811681602,
-        "Y": 37.4265395124974
+        "X": -565.12016191870828,
+        "Y": 45.722742121292413
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "String",
+        "Id": "a88c3b00378c4750a683eeb1acbaccd4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -731.60018913200622,
+        "Y": 45.722742121292413
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "All Elements of Category",
+        "Id": "e92f16cc529b4ce5b67cee4106c4bb44",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -339.18298212923321,
+        "Y": 45.722742121292413
       }
     ],
     "Annotations": [
@@ -428,18 +470,19 @@
         "WidthAdjustment": 0.0,
         "HeightAdjustment": 0.0,
         "Nodes": [
-          "f161d82d171247289b87b801e8daa0b3",
-          "ef16f021401e4d0a84d8d8ca93875389"
+          "d313a269f89344deaa4f558441188165",
+          "a88c3b00378c4750a683eeb1acbaccd4",
+          "e92f16cc529b4ce5b67cee4106c4bb44"
         ],
         "HasNestedGroups": false,
-        "Left": -561.327536714019,
-        "Top": -35.5734604875026,
-        "Width": 479.89672503241695,
+        "Left": -741.60018913200622,
+        "Top": -26.677257878707586,
+        "Width": 669.217207002773,
         "Height": 209.0,
         "FontSize": 36.0,
-        "InitialTop": 37.4265395124974,
+        "InitialTop": 45.722742121292413,
         "InitialHeight": 145.0,
-        "TextblockHeight": 63.0,
+        "TextblockHeight": 62.4,
         "Background": "#FFE8F7AD"
       },
       {
@@ -455,13 +498,13 @@
         ],
         "HasNestedGroups": false,
         "Left": 277.78267662935951,
-        "Top": 188.97312165055774,
-        "Width": 600.968493317446,
-        "Height": 239.0,
+        "Top": 189.57312165055774,
+        "Width": 600.16849331744606,
+        "Height": 239.4,
         "FontSize": 36.0,
         "InitialTop": 261.97312165055774,
         "InitialHeight": 145.0,
-        "TextblockHeight": 63.0,
+        "TextblockHeight": 62.4,
         "Background": "#FFE8F7AD"
       },
       {
@@ -476,13 +519,13 @@
         ],
         "HasNestedGroups": false,
         "Left": -82.701479978184921,
-        "Top": 198.5429479447331,
-        "Width": 181.45666666666668,
-        "Height": 252.0,
+        "Top": 198.94294794473311,
+        "Width": 200.0,
+        "Height": 250.6,
         "FontSize": 36.0,
         "InitialTop": 314.5429479447331,
         "InitialHeight": 145.0,
-        "TextblockHeight": 106.0,
+        "TextblockHeight": 105.6,
         "Background": "#FFFFB8D8"
       },
       {
@@ -498,13 +541,13 @@
         ],
         "HasNestedGroups": false,
         "Left": 911.317910950146,
-        "Top": -37.6596106241286,
-        "Width": 673.14154155777408,
-        "Height": 375.0,
+        "Top": -37.059610624128595,
+        "Width": 672.741541557774,
+        "Height": 373.79999999999995,
         "FontSize": 36.0,
         "InitialTop": 35.3403893758714,
         "InitialHeight": 145.0,
-        "TextblockHeight": 63.0,
+        "TextblockHeight": 62.4,
         "Background": "#FFFFC999"
       },
       {
@@ -518,14 +561,14 @@
           "75ec6816a0924e589d8d7ed9bd633d84"
         ],
         "HasNestedGroups": false,
-        "Left": -561.327536714019,
-        "Top": -191.19693967142598,
+        "Left": -737.02465799681465,
+        "Top": -176.04877039323279,
         "Width": 272.0,
-        "Height": 121.99999999999999,
+        "Height": 121.79999999999998,
         "FontSize": 36.0,
-        "InitialTop": -118.196939671426,
+        "InitialTop": -103.64877039323279,
         "InitialHeight": 145.0,
-        "TextblockHeight": 63.0,
+        "TextblockHeight": 62.4,
         "Background": "#FFFFFFFF"
       },
       {
@@ -537,8 +580,8 @@
         "HeightAdjustment": 0.0,
         "Nodes": [],
         "HasNestedGroups": false,
-        "Left": -551.327536714019,
-        "Top": -118.196939671426,
+        "Left": -727.02465799681465,
+        "Top": -103.64877039323279,
         "Width": 0.0,
         "Height": 0.0,
         "FontSize": 36.0,
@@ -548,8 +591,8 @@
         "Background": "#FFC1D676"
       }
     ],
-    "X": 354.19764550124052,
-    "Y": 388.16615316567481,
-    "Zoom": 0.29043555595208803
+    "X": 918.54531685908455,
+    "Y": 288.98656259672128,
+    "Zoom": 0.7148665788202575
   }
 }
